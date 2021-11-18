@@ -1,17 +1,23 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-accordion-entry',
   templateUrl: './accordion-entry.component.html',
   styleUrls: ['./accordion-entry.component.scss']
 })
-export class AccordionEntryComponent {
+export class AccordionEntryComponent implements OnInit {
 
   @Input() data: any;
-  expanded = false;
+  @Input() expanded: any;
+  open = false;
+
+  ngOnInit() {
+    this.open = this.expanded as boolean;
+    console.debug('data:', this.data, 'expanded:', this.expanded);
+  }
 
   onClick($event: any) {
-    this.expanded = !this.expanded;
+    this.open = !this.open;
   }
 
 }

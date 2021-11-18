@@ -35,8 +35,8 @@
 
   }
 
-  &.expanded {
-    .custom-accordion-body {
+  &.open {
+    >.custom-accordion-body {
 
       overflow: hidden;
       max-height: 100%;

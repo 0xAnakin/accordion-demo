@@ -1,13 +1,19 @@
-<div class="custom-accordion-entry" [class]="expanded ? 'custom-accordion-entry expanded': 'custom-accordion-entry'">
+<div class="custom-accordion-entry" [class]="open ? 'custom-accordion-entry open': 'custom-accordion-entry'">
   <div class="custom-accordion-header" (click)="onClick($event)">
     <h1>{{data.title}}</h1>
-    <i [class]="expanded ? 'fas fa-chevron-up': 'fas fa-chevron-down'"></i>
+    <i [class]="open ? 'fas fa-chevron-up': 'fas fa-chevron-down'"></i>
   </div>
   <div class="custom-accordion-body">
     <div class="custom-accordion-body-inner">
-      <div *ngIf="data.groups[0].title?.length > 0; then nestedBlock else normalBlock"></div>
-      <ng-template #nestedBlock>Nested accordion required</ng-template>
-      <ng-template #normalBlock>Normal rendering required</ng-template>
+      <div *ngIf="data.groups?.length && data.groups[0].title?.length > 0; then nestedBlock else normalBlock"></div>
+      <ng-template #nestedBlock>
+        <!-- Nested accordion required -->
+        <app-accordion [data]="data.groups"></app-accordion>
+      </ng-template>
+      <ng-template #normalBlock>
+        <!-- Normal rendering required -->
+        <app-accordion-entry-content [data]="data.groups"></app-accordion-entry-content>
+      </ng-template>
     </div>
   </div>
 </div>
