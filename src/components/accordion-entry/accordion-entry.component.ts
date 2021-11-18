@@ -7,17 +7,33 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AccordionEntryComponent implements OnInit {
 
-  @Input() data: any;
-  @Input() expanded: any;
-  open = false;
+  @Input() entry: any;
+
+  collapsed = true;
 
   ngOnInit() {
-    this.open = this.expanded as boolean;
-    console.debug('data:', this.data, 'expanded:', this.expanded);
+    this.collapsed = !(this.entry.expanded as boolean);
   }
 
   onClick($event: any) {
-    this.open = !this.open;
+
+    const entry = $event.target.closest('.custom-accordion-entry');
+    const element = entry.querySelector('.custom-accordion-body-inner');
+    const parent = entry.closest('.custom-accordion-body-inner');
+
+    if (parent) {
+
+      parent.parentNode.style.maxHeight = ``;
+      element.parentNode.style.maxHeight = `${element.getBoundingClientRect().height}px`;
+
+    } else {
+      element.parentNode.style.maxHeight = `${element.getBoundingClientRect().height}px`;
+    }
+
+    requestAnimationFrame(() => {
+      this.collapsed = !this.collapsed;
+    })
+
   }
 
 }

@@ -1,0 +1,15 @@
+.custom-accordion {
+  border-bottom: 1px solid lightgray;
+
+  &:last-child {
+    border-bottom: none !important;
+  }
+
+  .custom-accordion {
+    &.custom-accordion-nested {
+      &:first-of-type {
+        border-top: 1px solid lightgray !important;
+      }
+    }
+  }
+}

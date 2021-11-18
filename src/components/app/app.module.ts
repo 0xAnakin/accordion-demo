@@ -24,4 +24,4 @@ import { AccordionEntryContentComponent } from '../accordion-entry-content/accor
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

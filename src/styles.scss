@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+.custom-accordion {
+  &.custom-accordion-parent {
+    .custom-accordion-entry {
+
+      border-left: 0 !important;
+      border-top: 0 !important;
+
+      .custom-accordion-body {
+        .custom-accordion-body-inner {
+          .custom-accordion-child {
+            margin-left: -20px;
+            margin-right: -20px;
+            &:first-of-type{
+                border-top:1px solid lightgray;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+}
