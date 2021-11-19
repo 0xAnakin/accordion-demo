@@ -4,9 +4,9 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class LifeService {
+export class FireService {
   
-  private url = 'http://localhost:4200/assets/life.json';
+  private url = 'http://localhost:4200/assets/fire.json';
   
   constructor(private httpClient: HttpClient) { }
 
