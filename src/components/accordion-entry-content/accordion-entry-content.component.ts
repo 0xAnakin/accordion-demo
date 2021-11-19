@@ -9,4 +9,8 @@ export class AccordionEntryContentComponent {
 
   @Input() data: any;
 
+  printJSON() {
+    return JSON.stringify(this.data, null, 4);
+  }
+
 }

@@ -10,7 +10,7 @@
          <app-accordion [nested]="true" [data]="entry.groups"></app-accordion>
       </ng-template>
       <ng-template #normalBlock>
-        Normal Rendering
+        <app-accordion-entry-content [data]="entry.sections"></app-accordion-entry-content>
       </ng-template>
     </div>
   </div>
