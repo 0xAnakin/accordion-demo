@@ -5,9 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
-import { LifeComponent } from '../life-view/life.component';
-import { FireComponent } from '../fire-view/fire.component';
-import { MotorComponent } from '../motor-view/motor.component';
+import { LifePolicyComponent } from '../life-policy/life.component';
+import { PropertyPolicyComponent } from '../property-policy/property.component';
+import { MotorPolicyComponent } from '../motor-policy/motor.component';
 import { AccordionComponent } from '../accordion/accordion.component';
 import { AccordionEntryComponent } from '../accordion-entry/accordion-entry.component';
 import { AccordionEntryContentComponent } from '../accordion-entry-content/accordion-entry-content.component';
@@ -16,9 +16,9 @@ import { AccordionEntryContentComponent } from '../accordion-entry-content/accor
   declarations: [
     AppComponent,
     DashboardComponent,
-    LifeComponent,
-    FireComponent,
-    MotorComponent,
+    LifePolicyComponent,
+    PropertyPolicyComponent,
+    MotorPolicyComponent,
     AccordionComponent,
     AccordionEntryComponent,
     AccordionEntryContentComponent

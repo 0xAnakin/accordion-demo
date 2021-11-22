@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from '../dashboard/dashboard.component';
-import { LifeComponent } from '../life-view/life.component';
-import { FireComponent } from '../fire-view/fire.component';
-import { MotorComponent } from '../motor-view/motor.component';
+import { LifePolicyComponent } from '../life-policy/life.component';
+import { PropertyPolicyComponent } from '../property-policy/property.component';
+import { MotorPolicyComponent } from '../motor-policy/motor.component';
 import { NotFoundComponent } from '../not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
-  { path: 'life', component: LifeComponent },
-  { path: 'fire', component: FireComponent },
-  { path: 'motor', component: MotorComponent },
+  { path: 'life', component: LifePolicyComponent },
+  { path: 'property', component: PropertyPolicyComponent },
+  { path: 'motor', component: MotorPolicyComponent },
   { path: '**', component: NotFoundComponent }
 ];
 

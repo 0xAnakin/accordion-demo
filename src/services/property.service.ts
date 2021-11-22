@@ -5,9 +5,9 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class FireService {
+export class PropertyService {
 
-  private url = 'http://localhost:4200/assets/fire.json';
+  private url = 'http://localhost:4200/assets/property.json';
   private data: any;
 
   constructor(private httpClient: HttpClient) { }

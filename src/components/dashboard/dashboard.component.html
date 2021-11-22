@@ -1,5 +1,12 @@
-<ul class="nav justify-content-center grey lighten-4 py-3">
-  <li class="nav-item">
+<ul class="nav justify-content-center grey lighten-4 py-3" *ngFor="let key of objectKeys(data)">
+  <li>
+    
+    <a class="btn btn-secondary mx-2" routerLink="/{{key.toLowerCase()}}" routerLinkActive="active">
+      <span>{{data[key].Dsc}}</span>&nbsp;
+      <span class="badge badge-pill badge-primary">{{data[key].Policies?.length}}</span>
+    </a>
+  </li>
+  <!-- <li class="nav-item">
     <a class="btn btn-primary mx-2" routerLink="/life" routerLinkActive="active">Life</a>
   </li>
   <li class="nav-item">
@@ -7,5 +14,5 @@
   </li>
   <li class="nav-item">
     <a class="btn btn-primary mx-2" routerLink="/motor" routerLinkActive="active">Motor</a>
-  </li>
+  </li> -->
 </ul>

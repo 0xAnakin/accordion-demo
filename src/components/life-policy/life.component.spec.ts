@@ -1,21 +1,21 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { FireComponent } from './fire.component';
+import { LifePolicyComponent } from './life.component';
 
-describe('FireComponent', () => {
+describe('LifePolicyComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
       ],
       declarations: [
-        FireComponent
+        LifePolicyComponent
       ],
     }).compileComponents();
   });
 
   it('should get created', () => {
-    const fixture = TestBed.createComponent(FireComponent);
+    const fixture = TestBed.createComponent(LifePolicyComponent);
     const accordion = fixture.componentInstance;
     expect(accordion).toBeTruthy();
   });

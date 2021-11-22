@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { LifeService } from '../../services/life.service';
 
 @Component({
-  selector: 'app-life-view-component',
+  selector: 'app-life-policy',
   templateUrl: './life.component.html',
   styleUrls: ['./life.component.scss']
 })
-export class LifeComponent implements OnInit {
+export class LifePolicyComponent implements OnInit {
 
   data: any = [];
 

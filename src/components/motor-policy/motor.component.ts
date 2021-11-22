@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { MotorService } from '../../services/motor.service';
 
 @Component({
-  selector: 'app-motor-view-component',
+  selector: 'app-motor-policy',
   templateUrl: './motor.component.html',
   styleUrls: ['./motor.component.scss']
 })
-export class MotorComponent implements OnInit {
+export class MotorPolicyComponent implements OnInit {
 
   data: any = [];
 
