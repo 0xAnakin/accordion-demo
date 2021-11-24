@@ -1,18 +1,51 @@
-<ul class="nav justify-content-center grey lighten-4 py-3" *ngFor="let key of objectKeys(data)">
-  <li>
-    
-    <a class="btn btn-secondary mx-2" routerLink="/{{key.toLowerCase()}}" routerLinkActive="active">
-      <span>{{data[key].Dsc}}</span>&nbsp;
-      <span class="badge badge-pill badge-primary">{{data[key].Policies?.length}}</span>
-    </a>
-  </li>
-  <!-- <li class="nav-item">
-    <a class="btn btn-primary mx-2" routerLink="/life" routerLinkActive="active">Life</a>
-  </li>
-  <li class="nav-item">
-    <a class="btn btn-primary mx-2" routerLink="/fire" routerLinkActive="active">Fire</a>
-  </li>
-  <li class="nav-item">
-    <a class="btn btn-primary mx-2" routerLink="/motor" routerLinkActive="active">Motor</a>
-  </li> -->
-</ul>
+<div class="container dashboard-view">
+  
+  <div class="row">
+    <div class="col-12">
+      <h1 class="dashboard-title">Tα συμβόλαιά μου</h1>
+    </div>
+  </div>
+
+  <div class="row justify-content-between">
+    <div class="col-md-4">
+      <div class="dashboard-policy-filter">
+        <img src=/assets/images/dashboard-policy-filter.svg" /> 
+        <ul class="dashboard-policy-filters"></ul>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <ul class="dashboard-view-options">
+        <li (click)="onListViewClick($event)">
+          <img src="/assets/images/dashboard-list-view.svg" />
+        </li>
+        <li (click)="onGridViewClick($event)">
+          <img src="/assets/images/dashboard-grid-view.svg" />
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div *ngIf="view === 'grid'; then gridViewBlock else listViewBlock"></div>
+  <ng-template #gridViewBlock>
+    <app-dashboard-grid [data]="data"></app-dashboard-grid>
+  </ng-template>
+  <ng-template #listViewBlock>
+    <app-dashboard-list [data]="data"></app-dashboard-list>
+  </ng-template>
+
+  <div class="row">
+    <div class="col-12">
+      <ul class="dashboard-bullet-list">
+        <li>
+          <p>Εμφανίζονται μόνο τα σε ισχύ συμβόλαια των κλάδων Ζωής & Υγείας, Αυτοκινήτου και Πυρός.</p>
+        </li>
+        <li>
+          <p>Η εφαρμογή αναβαθμίζεται σταδιακά και μπορεί να μην εμφανίζει το σύνολο των σε ισχύ ασφαλιστηρίων συμβολαίων σας.</p>
+        </li>
+        <li>
+          <p>Αλλαγές και πληρωμές των τελευταίων 48 ωρών ίσως να μην εμφανίζονται εδώ.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
