@@ -3,6 +3,7 @@
     position: relative;
     width: 100%;
     padding-bottom: 50%;
+    background-color: #fff;
     box-shadow: 0px 0px 8px #00000029;
     border: 1px solid #0000001F;
     border-radius: 8px;
@@ -14,6 +15,7 @@
       top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
+      padding: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -27,7 +29,7 @@
         >.policy-badge {
           position: absolute;
           top: 25%;
-          right: 1%;
+          right: 0;
           left: auto;
           padding: 0.35em 1em !important;
           background-color: #0e70c7 !important;
@@ -59,12 +61,13 @@
     .dashboard-policy-box {
       >.policy-link {
         >.policy-icon-container {
-          max-height: calc(100% - 40px);
+          >.policy-badge {
+            top: 10%;
+          }
         }
 
         >.policy-name {
           font-size: 20px;
-          line-height: 40px;
         }
       }
     }
@@ -75,13 +78,8 @@
   .dashboard-grid-view {
     .dashboard-policy-box {
       >.policy-link {
-        >.policy-icon-container {
-          max-height: calc(100% - 40px);
-        }
-
         >.policy-name {
           font-size: 20px;
-          line-height: 40px;
         }
       }
     }
@@ -92,13 +90,8 @@
   .dashboard-grid-view {
     .dashboard-policy-box {
       >.policy-link {
-        >.policy-icon-container {
-          max-height: calc(100% - 40px);
-        }
-
         >.policy-name {
           font-size: 20px;
-          line-height: 40px;
         }
       }
     }
