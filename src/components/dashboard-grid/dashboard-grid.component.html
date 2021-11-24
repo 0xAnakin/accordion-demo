@@ -1,5 +1,5 @@
-<div class="row dashboard-grid-view">
-  <div class="col-md-4 mb-4" *ngFor="let key of objectKeys(data)">
+<div class="row justify-content-center dashboard-grid-view">
+  <div class="col-10 col-sm-8 col-md-4 mb-4" *ngFor="let key of objectKeys(data)">
     <div class="dashboard-policy-box">
       <a class="policy-link" routerLink="/{{key.toLowerCase()}}">
         <div class="policy-icon-container">

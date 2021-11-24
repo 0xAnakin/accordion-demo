@@ -3,14 +3,13 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 0px 4px #00000029;
     border-radius: 4px;
-    overflow: hidden;
 
     .dashboard-policy-row-head {
       display: flex;
       align-items: center;
       justify-content: flex-start;
       padding: 8px 16px;
-
+      overflow: hidden;
       >.policy-icon {
         max-height: 85px;
         margin-right: 16px;
@@ -24,7 +23,7 @@
     }
 
     .dashboard-policy-row-body {
-
+      overflow: hidden;
       >table {
         table-layout: fixed;
         width: 100%;

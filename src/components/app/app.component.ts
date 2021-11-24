@@ -8,10 +8,10 @@ import { ResizeService } from '../../services/resize.service';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private resizeService: ResizeService){}
+  constructor(private resizeService: ResizeService) { }
 
   ngOnInit() {
-    this.resizeService.onResize$.subscribe(this.onWindowResize);
+    this.resizeService.onResize$.subscribe(() => this.onWindowResize());
   }
 
   onWindowResize() {

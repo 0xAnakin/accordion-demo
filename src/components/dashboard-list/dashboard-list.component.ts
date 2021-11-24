@@ -10,26 +10,19 @@ export class DashboardListComponent implements OnInit {
 
   @Input() data: any = [];
   @Input() filters: any = [];
-  
+
   deviceWidth: number = window.innerWidth;
 
-  constructor(private resizeService: ResizeService){}
+  constructor(private resizeService: ResizeService) { }
 
   objectKeys = Object.keys;
 
   ngOnInit() {
-
-    this.resizeService.onResize$.subscribe(this.onWindowResize);
-    this.onWindowResize();
-
+    this.resizeService.onResize$.subscribe(() => this.onWindowResize());
   }
 
   onWindowResize() {
-
-    console.log("Resize!");
-
     this.deviceWidth = window.innerWidth;
-
   }
 
 }

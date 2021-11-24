@@ -5,29 +5,41 @@
   </div>
 
   <ng-template #mobileShow let-key="key" let-data="data">
-    <div class="dashboard-policy-row-head">
+    <div class="dashboard-policy-row-head mb-3">
       <img class="policy-icon" src="/assets/images/dashboard-{{key.toLowerCase()}}-policy.svg" />
       <h2 class="policy-name">{{data[key].Dsc}}</h2>
     </div>
     <div class="dashboard-policy-row-body">
-      <table cellpading="0" cellspacing="0">
-        <tr>
-          <th>Ασφαλισμένος MOBILE</th>
-          <th>Αρ. Συμβολαίου</th>
-          <th>Ημ.Έναρξης</th>
-          <th>Ημ.Λήξης</th>
-          <th>Κατάσταση</th>
-          <th>e-policy</th>
-        </tr>
-        <tr *ngFor="let record of data[key].Policies">
-          <td>{{record.Object}}</td>
-          <td>{{record.PolicyNo}}</td>
-          <td>{{formatDate(record.PolicyStart)}}</td>
-          <td>{{formatDate(record.PolicyEnd)}}</td>
-          <td>{{record.Status}}</td>
-          <td>{{record.Consent}}</td>
-        </tr>
-      </table>
+      <div class="dashboard-policy-row-body-inner">
+       
+        <div class="dashboard-policy-record mr-3" *ngFor="let record of data[key].Policies">
+          <div class="dashboard-policy-record-row">
+            <p>Ασφαλισμένος</p>
+            <p>{{record.Object}}</p>
+          </div>
+          <div class="dashboard-policy-record-row">
+            <p>Αρ. Συμβολαίου</p>
+            <p>{{record.PolicyNo}}</p>
+          </div>
+          <div class="dashboard-policy-record-row">
+            <p>Ημ.Έναρξης</p>
+            <p>{{formatDate(record.PolicyStart)}}</p>
+          </div>
+          <div class="dashboard-policy-record-row">
+            <p>Ημ.Λήξης</p>
+            <p>{{formatDate(record.PolicyEnd)}}</p>
+          </div>
+          <div class="dashboard-policy-record-row">
+            <p>Κατάσταση</p>
+            <p>{{record.Status}}</p>
+          </div>  
+          <div class="dashboard-policy-record-row">
+            <p>e-policy</p>
+            <p>{{record.Consent}}</p>
+          </div>                                                  
+        </div>
+
+      </div>
     </div>
   </ng-template>
   <ng-template #mobileHide></ng-template>
