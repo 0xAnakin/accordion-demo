@@ -1,5 +1,5 @@
 <div class="row dashboard-list-view">
-  <div class="col-12" *ngIf="mobile; then mobileListBlock else desktopListBlock"></div>
+  <div class="col-12" *ngIf="deviceWidth > 991; then desktopListBlock else mobileListBlock"></div>
   <ng-template #desktopListBlock>
     <app-dashboard-list-desktop [data]="data" [filters]="filters"></app-dashboard-list-desktop>
   </ng-template>

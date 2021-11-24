@@ -12,74 +12,81 @@
   }
 
   // Section B
-  .dashboard-policy-filter {
+  .dashboard-policy-toolbar {
     display: flex;
     align-items: center;
-    justify-items: flex-start;
+    justify-content: space-between;
 
-    .dashboard-filter-dropdown {
-      margin-right: 8px;
-
-      >a {
-        &:after {
-          display: none;
-        }
-      }
-    }
-
-    .dashboard-active-policy-filters {
-      list-style: none;
+    .dashboard-policy-filter {
       display: flex;
       align-items: center;
       justify-items: flex-start;
-      margin: 0;
-      padding: 0;
+      margin-bottom: 16px;
 
-      >li {
-        background-color: #e0e0e0;
-        border-radius: 16px;
+      .dashboard-filter-dropdown {
         margin-right: 8px;
-        padding: 2px 8px;
 
-        >span {
-          color: #000;
-          text-align: left;
-          font: normal normal normal 14px/20px "lato", lato, sans-serif;
-          letter-spacing: 0.09px;
+        >a {
+          &:after {
+            display: none;
+          }
         }
+      }
 
-        >i {
-          margin-left: 4px;
-          color: #5a5a5a;
+      .dashboard-active-policy-filters {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-items: flex-start;
+        margin: 0;
+        padding: 0;
 
-          &:hover {
-            cursor: pointer;
+        >li {
+          background-color: #e0e0e0;
+          border-radius: 16px;
+          margin-right: 8px;
+          padding: 2px 8px;
+
+          >span {
+            color: #000;
+            text-align: left;
+            font: normal normal normal 14px/20px "lato", lato, sans-serif;
+            letter-spacing: 0.09px;
+          }
+
+          >i {
+            margin-left: 4px;
+            color: #5a5a5a;
+
+            &:hover {
+              cursor: pointer;
+            }
           }
         }
       }
     }
-  }
 
-  .dashboard-view-options {
-    margin: 0 0 16px 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    .dashboard-view-options {
+      margin: 0 0 16px auto;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
 
-    >li {
-      &:not(:first-child) {
-        margin-left: 16px;
-      }
+      >li {
+        &:not(:first-child) {
+          margin-left: 16px;
+        }
 
-      &:hover {
-        cursor: pointer;
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }
 
-  // see grid or list component for Section C
+  // Section C -> see dashboard-grid or dashboard-list components
 
   // Section D
   .dashboard-bullet-list {

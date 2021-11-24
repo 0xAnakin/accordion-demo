@@ -11,7 +11,7 @@ export class DashboardListComponent implements OnInit {
   @Input() data: any = [];
   @Input() filters: any = [];
   
-  mobile: boolean = false;
+  deviceWidth: number = window.innerWidth;
 
   constructor(private resizeService: ResizeService){}
 
@@ -26,13 +26,9 @@ export class DashboardListComponent implements OnInit {
 
   onWindowResize() {
 
-    console.log("Resize!")
+    console.log("Resize!");
 
-    if (window.innerWidth < 992) {
-      this.mobile = true;
-    } else {
-      this.mobile = false;
-    }
+    this.deviceWidth = window.innerWidth;
 
   }
 
