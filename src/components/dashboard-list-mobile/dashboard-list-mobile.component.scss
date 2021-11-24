@@ -1,0 +1,59 @@
+.dashboard-list-view-mobile {
+  .dashboard-policy-row {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 4px #00000029;
+    border-radius: 4px;
+
+    .dashboard-policy-row-head {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 8px 16px;
+
+      >.policy-icon {
+        max-height: 85px;
+        margin-right: 16px;
+      }
+
+      >.policy-name {
+        font: normal normal normal 24px/46px "lato", lato, sans-serif;
+        letter-spacing: 0.17px;
+        color: #000000;
+      }
+    }
+
+    .dashboard-policy-row-body {
+
+      >table {
+        table-layout: fixed;
+        width: 100%;
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+
+        tr {
+
+          th,
+          td {
+            padding: 16px;
+            vertical-align: middle;
+          }
+
+          th {
+            text-align: left;
+            font: normal normal normal 14px/20px "lato", lato, sans-serif;
+            letter-spacing: 0.09px;
+            color: #00000099;
+          }
+
+          td {
+            text-align: left;
+            font: normal normal normal 14px/20px "lato", lato, sans-serif;
+            letter-spacing: 0.09px;
+            color: #000000;
+            border-top: 1px solid lightgray;
+          }
+        }
+      }
+    }
+  }
+}

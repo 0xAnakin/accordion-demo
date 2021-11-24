@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResizeService } from '../../services/resize.service';
 
 @Component({
   selector: 'app-root',
@@ -7,18 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  ngOnInit() {
+  constructor(private resizeService: ResizeService){}
 
-    window.addEventListener('resize', this.updateAccordionHeights);
-    
+  ngOnInit() {
+    this.resizeService.onResize$.subscribe(this.onWindowResize);
   }
 
-  updateAccordionHeights() {
-
+  onWindowResize() {
     window.document.querySelectorAll('.custom-accordion-body-inner').forEach((element: any) => {
       element.parentNode.style.maxHeight = `${element.getBoundingClientRect().height}px`;
     })
-
   }
 
 }

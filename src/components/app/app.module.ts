@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { DashboardGridComponent } from '../dashboard-grid/dashboard-grid.component';
 import { DashboardListComponent } from '../dashboard-list/dashboard-list.component';
+import { DashboardListDesktopComponent } from '../dashboard-list-desktop/dashboard-list-desktop.component';
+import { DashboardListMobileComponent } from '../dashboard-list-mobile/dashboard-list-mobile.component';
 import { LifePolicyComponent } from '../life-policy/life.component';
 import { PropertyPolicyComponent } from '../property-policy/property.component';
 import { MotorPolicyComponent } from '../motor-policy/motor.component';
@@ -20,6 +22,8 @@ import { AccordionEntryContentComponent } from '../accordion-entry-content/accor
     DashboardComponent,
     DashboardGridComponent,
     DashboardListComponent,
+    DashboardListDesktopComponent,
+    DashboardListMobileComponent,
     LifePolicyComponent,
     PropertyPolicyComponent,
     MotorPolicyComponent,

@@ -1,36 +1,9 @@
 <div class="row dashboard-list-view">
-  <div class="col-12">
-    <div class="dashboard-policy-row mb-4" *ngFor="let key of objectKeys(data)">
-      <ng-container *ngTemplateOutlet="shouldBeRendered(key)?show:hide; context:{key:key, data:data};"></ng-container>
-    </div>
-
-    <ng-template #show let-key="key" let-data="data">
-      <div class="dashboard-policy-row-head">
-        <img class="policy-icon" src="/assets/images/dashboard-{{key.toLowerCase()}}-policy.svg" />
-        <h2 class="policy-name">{{data[key].Dsc}}</h2>
-      </div>
-      <div class="dashboard-policy-row-body">
-        <table cellpading="0" cellspacing="0">
-            <tr>
-                <th>Ασφαλισμένος</th>
-                <th>Αρ. Συμβολαίου</th>
-                <th>Ημ.Έναρξης</th>
-                <th>Ημ.Λήξης</th>
-                <th>Κατάσταση</th>
-                <th>e-policy</th>
-            </tr>
-            <tr *ngFor="let record of data[key].Policies">
-                <td>{{record.Object}}</td>
-                <td>{{record.PolicyNo}}</td>
-                <td>{{formatDate(record.PolicyStart)}}</td>
-                <td>{{formatDate(record.PolicyEnd)}}</td>
-                <td>{{record.Status}}</td>
-                <td>{{record.Consent}}</td>
-            </tr>
-        </table>
-      </div>
-    </ng-template>
-    <ng-template #hide></ng-template>
-
-  </div>
+  <div class="col-12" *ngIf="mobile; then mobileListBlock else desktopListBlock"></div>
+  <ng-template #desktopListBlock>
+    <app-dashboard-list-desktop [data]="data" [filters]="filters"></app-dashboard-list-desktop>
+  </ng-template>
+  <ng-template #mobileListBlock>
+    <app-dashboard-list-mobile [data]="data" [filters]="filters"></app-dashboard-list-mobile>
+  </ng-template>
 </div>

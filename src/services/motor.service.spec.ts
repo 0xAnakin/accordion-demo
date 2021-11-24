@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { MotorService } from './motor.service';
 
 describe('MotorService', () => {

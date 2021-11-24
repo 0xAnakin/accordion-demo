@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-import { PoliciesService } from './policies.service';
+import { ResizeService } from './resize.service';
 
-describe('PoliciesService', () => {
-  let service: PoliciesService;
+describe('ResizeService', () => {
+  let service: ResizeService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(PoliciesService);
+    service = TestBed.inject(ResizeService);
   });
 
   it('should be created', () => {

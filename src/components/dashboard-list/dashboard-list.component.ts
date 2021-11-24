@@ -1,36 +1,39 @@
-import { Component, Input } from '@angular/core';
-// import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { ResizeService } from '../../services/resize.service';
 
 @Component({
   selector: 'app-dashboard-list',
   templateUrl: './dashboard-list.component.html',
   styleUrls: ['./dashboard-list.component.scss']
 })
-export class DashboardListComponent {
+export class DashboardListComponent implements OnInit {
 
   @Input() data: any = [];
   @Input() filters: any = [];
+  
+  mobile: boolean = false;
+
+  constructor(private resizeService: ResizeService){}
 
   objectKeys = Object.keys;
-  
-  shouldBeRendered(filter:string) {
-    if (!this.filters.length) {
-      return true;
-    } else {
-      return this.filters.includes(filter);
-    }
+
+  ngOnInit() {
+
+    this.resizeService.onResize$.subscribe(this.onWindowResize);
+    this.onWindowResize();
+
   }
 
-  formatDate(date: string) {
-    
-    const arr = date.split("-");
+  onWindowResize() {
 
-    if (arr.length === 3) {
-      return arr.reverse().join("/");
+    console.log("Resize!")
+
+    if (window.innerWidth < 992) {
+      this.mobile = true;
+    } else {
+      this.mobile = false;
     }
 
-    return date;
-    
   }
 
 }
