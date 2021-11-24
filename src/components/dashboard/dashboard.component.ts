@@ -9,10 +9,13 @@ import { PoliciesService } from '../../services/policies.service';
 })
 export class DashboardComponent implements OnInit {
 
-  view: string = "grid";
+  view: string = "GRID";
+  filters: any = [];
   data: any = [];
 
   constructor(private policiesService: PoliciesService) { }
+
+  objectKeys = Object.keys;
 
   ngOnInit() {
 
@@ -26,13 +29,51 @@ export class DashboardComponent implements OnInit {
 
   }
 
+  onFilterClick($event: any, key: string) {
+
+    $event.preventDefault();
+
+    if (key === 'All') {
+      
+      if (this.filters.length) {
+        this.filters = [];
+      }
+
+    } else {
+
+      const idx = this.filters.indexOf(key);
+
+      if (idx > -1) {
+        this.filters.splice(idx, 1);
+      } else {
+        this.filters = [...this.filters, key];
+      }
+
+    }
+
+    console.debug("active filters:", this.filters.join(', '));
+
+  }
+
+  onFilterRemoveClick($event:any, filter:string){
+    
+    const idx = this.filters.indexOf(filter);
+
+    if (idx > -1) {
+      this.filters.splice(idx, 1);
+    }
+
+    console.debug("active filters:", this.filters.join(', '));
+
+  }
+
   onGridViewClick($event: any) {
-    this.view = "grid";
+    this.view = "GRID";
     console.debug("selected grid view");
   }
 
   onListViewClick($event: any) {
-    this.view = "list";
+    this.view = "LIST";
     console.debug("selected list view");
   }
 

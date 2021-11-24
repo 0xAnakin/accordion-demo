@@ -1,5 +1,5 @@
 <div class="container dashboard-view">
-  
+
   <div class="row">
     <div class="col-12">
       <h1 class="dashboard-title">Tα συμβόλαιά μου</h1>
@@ -8,9 +8,25 @@
 
   <div class="row justify-content-between">
     <div class="col-md-4">
-      <div class="dashboard-policy-filter">
-        <img src=/assets/images/dashboard-policy-filter.svg" /> 
-        <ul class="dashboard-policy-filters"></ul>
+      <div class="dashboard-policy-filter" *ngIf="view === 'LIST'">
+
+        <div class="dashboard-filter-dropdown" mdbDropdown>
+          <a mdbDropdownToggle type="button" class="dropdown-toggle">
+            <img class="img-fluid z-depth-0" src="/assets/images/dashboard-policy-filter.svg" />
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#" *ngFor="let key of objectKeys(data)" (click)="onFilterClick($event, key)">{{data[key].Dsc}}</a>
+            <a class="dropdown-item" href="#" (click)="onFilterClick($event, 'All')">Όλοι οι κλάδοι</a>
+          </div>
+        </div>
+
+        <ul class="dashboard-active-policy-filters" *ngFor="let filter of filters">
+          <li>
+            <span>{{filter}}</span>
+            <i (click)="onFilterRemoveClick($event, filter)" class="fas fa-times-circle"></i>
+          </li>
+        </ul>
+        
       </div>
     </div>
     <div class="col-md-4">
@@ -24,13 +40,13 @@
       </ul>
     </div>
   </div>
-  
-  <div *ngIf="view === 'grid'; then gridViewBlock else listViewBlock"></div>
+
+  <div *ngIf="view === 'GRID'; then gridViewBlock else listViewBlock"></div>
   <ng-template #gridViewBlock>
     <app-dashboard-grid [data]="data"></app-dashboard-grid>
   </ng-template>
   <ng-template #listViewBlock>
-    <app-dashboard-list [data]="data"></app-dashboard-list>
+    <app-dashboard-list [data]="data" [filters]="filters"></app-dashboard-list>
   </ng-template>
 
   <div class="row">
@@ -40,7 +56,8 @@
           <p>Εμφανίζονται μόνο τα σε ισχύ συμβόλαια των κλάδων Ζωής & Υγείας, Αυτοκινήτου και Πυρός.</p>
         </li>
         <li>
-          <p>Η εφαρμογή αναβαθμίζεται σταδιακά και μπορεί να μην εμφανίζει το σύνολο των σε ισχύ ασφαλιστηρίων συμβολαίων σας.</p>
+          <p>Η εφαρμογή αναβαθμίζεται σταδιακά και μπορεί να μην εμφανίζει το σύνολο των σε ισχύ ασφαλιστηρίων
+            συμβολαίων σας.</p>
         </li>
         <li>
           <p>Αλλαγές και πληρωμές των τελευταίων 48 ωρών ίσως να μην εμφανίζονται εδώ.</p>

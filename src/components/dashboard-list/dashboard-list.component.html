@@ -1,6 +1,10 @@
 <div class="row dashboard-list-view">
   <div class="col-12">
     <div class="dashboard-policy-row mb-4" *ngFor="let key of objectKeys(data)">
+      <ng-container *ngTemplateOutlet="shouldBeRendered(key)?show:hide; context:{key:key, data:data};"></ng-container>
+    </div>
+
+    <ng-template #show let-key="key" let-data="data">
       <div class="dashboard-policy-row-head">
         <img class="policy-icon" src="/assets/images/dashboard-{{key.toLowerCase()}}-policy.svg" />
         <h2 class="policy-name">{{data[key].Dsc}}</h2>
@@ -25,6 +29,8 @@
             </tr>
         </table>
       </div>
-    </div>
+    </ng-template>
+    <ng-template #hide></ng-template>
+
   </div>
 </div>

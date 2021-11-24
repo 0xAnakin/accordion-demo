@@ -9,9 +9,18 @@ import { Component, Input } from '@angular/core';
 export class DashboardListComponent {
 
   @Input() data: any = [];
+  @Input() filters: any = [];
 
   objectKeys = Object.keys;
   
+  shouldBeRendered(filter:string) {
+    if (!this.filters.length) {
+      return true;
+    } else {
+      return this.filters.includes(filter);
+    }
+  }
+
   formatDate(date: string) {
     
     const arr = date.split("-");
