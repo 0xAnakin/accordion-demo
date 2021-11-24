@@ -9,9 +9,8 @@ import { PoliciesService } from '../../services/policies.service';
 })
 export class DashboardComponent implements OnInit {
 
+  view: string = "grid";
   data: any = [];
-
-  objectKeys = Object.keys;
 
   constructor(private policiesService: PoliciesService) { }
 
@@ -25,6 +24,16 @@ export class DashboardComponent implements OnInit {
 
     });
 
+  }
+
+  onGridViewClick($event: any) {
+    this.view = "grid";
+    console.debug("selected grid view");
+  }
+
+  onListViewClick($event: any) {
+    this.view = "list";
+    console.debug("selected list view");
   }
 
 }

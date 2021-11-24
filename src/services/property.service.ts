@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class PropertyService {
 
-  private url = 'http://localhost:4200/assets/property.json';
+  private url = 'http://localhost:4200/assets/mock/property.json';
   private data: any;
 
   constructor(private httpClient: HttpClient) { }

@@ -1,0 +1,106 @@
+.dashboard-grid-view {
+  .dashboard-policy-box {
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%;
+    box-shadow: 0px 0px 8px #00000029;
+    border: 1px solid #0000001F;
+    border-radius: 8px;
+
+    >.policy-link {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      >.policy-icon-container {
+        position: relative;
+        max-width: 152px;
+        max-height: calc(100% - 30px);
+
+        >.policy-badge {
+          position: absolute;
+          top: 25%;
+          right: 1%;
+          left: auto;
+          padding: 0.35em 1em !important;
+          background-color: #0e70c7 !important;
+        }
+
+        >.policy-icon {
+          display: block;
+          margin: 0 auto;
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+
+      >.policy-name {
+        font: normal 24px/30px "lato", lato, sans-serif;
+        letter-spacing: 0px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+    }
+  }
+}
+
+@media (max-width:399px) {
+  .dashboard-grid-view {
+    .dashboard-policy-box {
+      >.policy-link {
+        >.policy-icon-container {
+          max-height: calc(100% - 40px);
+        }
+
+        >.policy-name {
+          font-size: 20px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .dashboard-grid-view {
+    .dashboard-policy-box {
+      >.policy-link {
+        >.policy-icon-container {
+          max-height: calc(100% - 40px);
+        }
+
+        >.policy-name {
+          font-size: 20px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+  .dashboard-grid-view {
+    .dashboard-policy-box {
+      >.policy-link {
+        >.policy-icon-container {
+          max-height: calc(100% - 40px);
+        }
+
+        >.policy-name {
+          font-size: 20px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class PoliciesService {
 
-  private url = 'http://localhost:4200/assets/policies.json';
+  private url = 'http://localhost:4200/assets/mock/policies.json';
   private data: any;
 
   constructor(private httpClient: HttpClient) { }

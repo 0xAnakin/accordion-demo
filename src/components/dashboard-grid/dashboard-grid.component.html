@@ -1,0 +1,13 @@
+<div class="row dashboard-grid-view">
+  <div class="col-md-4 mb-4" *ngFor="let key of objectKeys(data)">
+    <div class="dashboard-policy-box">
+      <a class="policy-link" routerLink="/{{key.toLowerCase()}}">
+        <div class="policy-icon-container">
+          <span class="policy-badge badge badge-pill badge-primary">{{data[key].Policies?.length}}</span>
+          <img class="policy-icon" src="/assets/images/dashboard-{{key.toLowerCase()}}-policy.svg" />
+        </div>
+        <h2 class="policy-name">{{data[key].Dsc}}</h2>
+      </a>
+    </div>
+  </div>
+</div>

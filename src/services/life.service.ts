@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class LifeService {
 
-  private url = 'http://localhost:4200/assets/life.json';
+  private url = 'http://localhost:4200/assets/mock/life.json';
   private data: any;
 
   constructor(private httpClient: HttpClient) { }
