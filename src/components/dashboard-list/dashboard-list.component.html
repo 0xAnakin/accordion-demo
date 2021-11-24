@@ -1,9 +1,11 @@
 <div class="row dashboard-list-view">
-  <div class="col-12" *ngIf="deviceWidth > 991; then desktopListBlock else mobileListBlock"></div>
-  <ng-template #desktopListBlock>
-    <app-dashboard-list-desktop [data]="data" [filters]="filters"></app-dashboard-list-desktop>
-  </ng-template>
-  <ng-template #mobileListBlock>
-    <app-dashboard-list-mobile [data]="data" [filters]="filters"></app-dashboard-list-mobile>
-  </ng-template>
+  <div class="col-12">
+    <div *ngIf="deviceWidth > 991; then desktopListBlock else mobileListBlock"></div>
+    <ng-template #desktopListBlock>
+      <app-dashboard-list-desktop [data]="data" [filters]="filters"></app-dashboard-list-desktop>
+    </ng-template>
+    <ng-template #mobileListBlock>
+      <app-dashboard-list-mobile [data]="data" [filters]="filters"></app-dashboard-list-mobile>
+    </ng-template>
+  </div>
 </div>
