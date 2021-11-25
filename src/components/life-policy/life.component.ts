@@ -36,7 +36,6 @@ export class LifePolicyComponent implements OnInit {
           this.title = tmp.Dsc;
 
           for (let i = 0; i < tmp.Policies.length; i++) {
-
             if (tmp.Policies[i].PolicyNo === policyNo) {
 
               this.policy = tmp.Policies[i];
