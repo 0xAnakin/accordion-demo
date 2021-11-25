@@ -12,7 +12,7 @@
     <div class="dashboard-policy-row-body">
       <div class="dashboard-policy-row-body-inner">
        
-        <div class="dashboard-policy-record mr-3" *ngFor="let record of data[key].Policies">
+        <div class="dashboard-policy-record mr-3" (click)="onRecordCLick($event, key, record)" *ngFor="let record of data[key].Policies">
           <div class="dashboard-policy-record-row">
             <p>Ασφαλισμένος</p>
             <p>{{record.Object}}</p>

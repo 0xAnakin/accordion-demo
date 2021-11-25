@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard-list-mobile',
@@ -9,6 +10,8 @@ export class DashboardListMobileComponent {
 
   @Input() data: any = [];
   @Input() filters: any = [];
+
+  constructor(private router: Router) { }
 
   objectKeys = Object.keys;
 
@@ -31,5 +34,13 @@ export class DashboardListMobileComponent {
     return date;
 
   }
+
+  sanitizeURLParam(param: string) {
+    return param.replace(/[/]/g,"-");
+  }
+
+  onRecordCLick($event: any, key: string, record: any) {
+    this.router.navigateByUrl(`/${key.toLowerCase()}/${this.sanitizeURLParam(record.PolicyNo)}`, { state: record });
+  }  
 
 }

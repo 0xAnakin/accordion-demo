@@ -19,7 +19,7 @@
           <th>Κατάσταση</th>
           <th>e-policy</th>
         </tr>
-        <tr class="dashboard-policy-record" *ngFor="let record of data[key].Policies">
+        <tr class="dashboard-policy-record" (click)="onRecordCLick($event, key, record)" *ngFor="let record of data[key].Policies">
           <td>{{record.Object}}</td>
           <td>{{record.PolicyNo}}</td>
           <td>{{formatDate(record.PolicyStart)}}</td>

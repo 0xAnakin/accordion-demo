@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { Location } from '@angular/common';
+import { Router, ActivatedRoute } from '@angular/router';
 import { PoliciesService } from '../../services/policies.service';
 
 @Component({
@@ -41,10 +40,6 @@ export class DashboardComponent implements OnInit {
       console.debug("retrieved new policies data:", res);
 
     });
-
-  }
-
-  onGridBoxClick($event: any) {
 
   }
 
