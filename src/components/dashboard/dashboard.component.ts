@@ -25,6 +25,8 @@ export class DashboardComponent implements OnInit {
         this.filters = params["filters"];
       } else if (typeof params["filters"] === "string" && params["filters"].length) {
         this.filters = [params["filters"]];
+      } else {
+        this.filters = [];
       }
 
       if (this.filters.length) {
