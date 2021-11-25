@@ -45,7 +45,7 @@ export class PropertyPolicyComponent implements OnInit {
                 this.data = data;
               });
 
-              console.log('policy record:', this.policy);
+              console.debug('policy:', this.policy);
 
               break;
             }
@@ -85,9 +85,9 @@ export class PropertyPolicyComponent implements OnInit {
 
   onSwitchChange($event: any) {
     if ($event.currentTarget.checked) {
-      console.log('switch is ON');
+      console.debug('switch is ON');
     } else {
-      console.log('switch is OFF');
+      console.debug('switch is OFF');
     }
   }
 
