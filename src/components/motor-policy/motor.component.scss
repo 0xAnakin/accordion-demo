@@ -63,6 +63,7 @@
               font: normal normal normal 14px/20px "lato", lato, sans-serif;
               letter-spacing: 0.09px;
               color: #00000099;
+              margin-bottom: 4px;
             }
 
             &:last-child {
@@ -70,7 +71,56 @@
               letter-spacing: 0.09px;
               color: #000000;
             }
+
           }
+
+          >div {
+            label {
+              font: normal normal 600 14px/20px "lato", lato, sans-serif;
+              letter-spacing: 0.09px;
+              color: #000000;
+
+              .lever {
+                margin: 0 0.25rem !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:575.9px) {
+  .motor-policy-container {
+    .policy-header {
+      .policy-info-col {
+        >ul {
+          padding: 16px;
+
+          >li {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width:767px) {
+  .motor-policy-container {
+    .policy-header {
+      .policy-logo-col {
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        padding: 4px !important;
+
+        >img {
+          margin-left: 0;
+          margin-right: 0;
+          max-height: 80px;
         }
       }
     }

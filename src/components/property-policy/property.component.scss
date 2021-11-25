@@ -1,0 +1,129 @@
+.property-policy-container {
+    .policy-nav-back {
+      &:hover {
+        text-decoration: none;
+      }
+  
+      >i {
+        color: #004A92;
+      }
+  
+      >span {
+        font: normal normal bold 14px/20px "lato", lato, sans-serif;
+        letter-spacing: 0.42px;
+        color: #004A92;
+        margin-left: 8px
+      }
+    }
+  
+    .policy-header {
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      box-shadow: 0px 0px 8px #00000029;
+  
+      .policy-logo-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #6881C4;
+  
+        img {
+          display: block;
+          margin: 0 auto;
+          max-width: 160px;
+        }
+  
+        h1 {
+          font: normal normal normal 24px/30px "lato", lato, sans-serif;
+          letter-spacing: 0px;
+          color: #FFFFFF;
+          margin: 0;
+          padding: 0;
+        }
+      }
+  
+      .policy-info-col {
+        >ul {
+          list-style: none;
+          margin: 0;
+          padding: 40px 10%;
+          font-size: 0;
+  
+          >li {
+            width: 50%;
+            display: inline-block;
+            font-size: initial;
+            margin-bottom: 16px;
+  
+            >p {
+              margin: 0;
+              padding: 0;
+  
+              &:first-child {
+                font: normal normal normal 14px/20px "lato", lato, sans-serif;
+                letter-spacing: 0.09px;
+                color: #00000099;
+                margin-bottom: 4px;
+              }
+  
+              &:last-child {
+                font: normal normal 600 14px/20px "lato", lato, sans-serif;
+                letter-spacing: 0.09px;
+                color: #000000;
+              }
+  
+            }
+  
+            >div {
+              label {
+                font: normal normal 600 14px/20px "lato", lato, sans-serif;
+                letter-spacing: 0.09px;
+                color: #000000;
+  
+                .lever {
+                  margin: 0 0.25rem !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width:575.9px) {
+    .motor-policy-container {
+      .policy-header {
+        .policy-info-col {
+          >ul {
+            padding: 16px;
+  
+            >li {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  
+  }
+  
+  @media (max-width:767px) {
+    .motor-policy-container {
+      .policy-header {
+        .policy-logo-col {
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: row;
+          padding: 4px !important;
+  
+          >img {
+            margin-left: 0;
+            margin-right: 0;
+            max-height: 80px;
+          }
+        }
+      }
+    }
+  }
+  

@@ -4,10 +4,6 @@ import { Location } from '@angular/common';
 import { PoliciesService } from '../../services/policies.service';
 import { MotorService } from '../../services/motor.service';
 
-class MotorPolicy{
-
-}
-
 @Component({
   selector: 'app-motor-policy',
   templateUrl: './motor.component.html',

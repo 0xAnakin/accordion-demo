@@ -1,1 +1,61 @@
-<app-accordion [nested]="false" [data]="data"></app-accordion>
+<div class="life-policy-container">
+    <div class="row mb-3">
+      <div class="col-12">
+        <a href="#" class="policy-nav-back" (click)="onPolicyNavBackClick($event)">
+          <i class="fas fa-arrow-left"></i>
+          <span>ΕΠΙΣΤΡΟΦΗ</span>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="policy-header" *ngIf="data.length">
+          <div class="row m-0">
+            <div class="p-0 col-12 col-md-4 col-lg-3 policy-logo-col">
+              <img src="/assets/images/dashboard-life-policy.svg" />
+              <h1>{{title}}</h1>
+            </div>
+            <div class="p-0 col-12 col-md-8 col-lg-9 policy-info-col">
+              <ul>
+                <li>
+                  <p>Αρ. Κυκλοφορίας</p>
+                  <p>{{policy.Object}}</p>
+                </li>
+                <li>
+                  <p>Ημ. Έναρξης</p>
+                  <p>{{formatDate(policy.PolicyStart)}}</p>
+                </li>
+                <li>
+                  <p>Αρ. Συμβολαίου</p>
+                  <p>{{policy.PolicyNo}}</p>
+                </li>
+                <li>
+                  <p>Ημ. Λήξης</p>
+                  <p>{{formatDate(policy.PolicyEnd)}}</p>
+                </li>
+                <li>
+                  <p>Κατάσταση</p>
+                  <p>{{policy.Status}}</p>
+                </li>
+                <li>
+                  <p>e-policy</p>
+                  <div class="switch">
+                    <label>
+                      <input type="checkbox" />
+                      <span class="lever"></span> {{policy.Consent}}
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12">
+        <app-accordion [nested]="false" [data]="data"></app-accordion>
+      </div>
+    </div>
+  </div>
+  
