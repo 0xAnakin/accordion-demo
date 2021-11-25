@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { PoliciesService } from '../../services/policies.service';
 import { LifeService } from '../../services/life.service';
+import { TranslationService } from 'src/services/translation.service';
 
 @Component({
   selector: 'app-life-policy',
@@ -15,7 +16,7 @@ export class LifePolicyComponent implements OnInit {
   policy: any = {};
   data: any = [];
 
-  constructor(private policiesService: PoliciesService, private lifeService: LifeService, private activatedRoute: ActivatedRoute, private location: Location) { }
+  constructor(public translationService:TranslationService, private policiesService: PoliciesService, private lifeService: LifeService, private activatedRoute: ActivatedRoute, private location: Location) { }
 
   objectKeys = Object.keys;
 

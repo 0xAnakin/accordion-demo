@@ -19,5 +19,5 @@ export class AppComponent implements OnInit {
       element.parentNode.style.maxHeight = `${element.getBoundingClientRect().height}px`;
     })
   }
-
+  
 }

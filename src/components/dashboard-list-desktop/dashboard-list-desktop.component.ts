@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslationService } from 'src/services/translation.service';
 
 @Component({
   selector: 'app-dashboard-list-desktop',
@@ -11,7 +12,7 @@ export class DashboardListDesktopComponent {
   @Input() data: any = [];
   @Input() filters: any = [];
 
-  constructor(private router: Router) { }
+  constructor(public translationService:TranslationService, private router: Router) { }
 
   objectKeys = Object.keys;
 

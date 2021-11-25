@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { PoliciesService } from '../../services/policies.service';
+import { TranslationService } from 'src/services/translation.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +14,7 @@ export class DashboardComponent implements OnInit {
   filters: any = [];
   data: any = [];
 
-  constructor(private policiesService: PoliciesService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(public translationService:TranslationService, private policiesService: PoliciesService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   objectKeys = Object.keys;
 
@@ -112,6 +113,10 @@ export class DashboardComponent implements OnInit {
 
     console.debug("active filters:", this.filters ? this.filters : []);
 
+  }
+
+  getFilterLocalizationKey(filter:string="") {
+    return `dashboard.filters.${filter}`;
   }
 
 }

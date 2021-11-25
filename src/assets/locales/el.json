@@ -1,0 +1,23 @@
+{
+  "EL": {
+    "dashboard": {
+      "title":"Tα συμβόλαιά μου",
+      "filters": {
+        "life": "Ζωή και Υγεία",
+        "motor": "Αυτοκίνητο",
+        "property": "Περιουσία"
+      },
+      "list":{
+        "insured": "Ασφαλισμένος",
+        "policyNumber": "Αρ. Συμβολαίου",
+        "startDate":"Ημ.Έναρξης",
+        "endDate":"Ημ.Λήξης",
+        "status": "Κατάσταση",
+        "ePolicy":"e-policy"
+      }      
+    },
+    "policy": {
+      "policyNavBack": "ΕΠΙΣΤΡΟΦΗ"
+    }
+  }
+}

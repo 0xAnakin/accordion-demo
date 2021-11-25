@@ -1,0 +1,23 @@
+{
+  "EN": {
+    "dashboard": {
+      "title":"My policies",
+      "filters": {
+        "life": "Life and Health",
+        "motor": "Automotive",
+        "property": "Property"
+      },
+      "list":{
+        "insured": "Insured",
+        "policyNumber": "Pol. Number",
+        "startDate":"Starting Date",
+        "endDate":"Ending Date",
+        "status": "Status",
+        "ePolicy":"e-policy"
+      }      
+    },
+    "policy": {
+      "policyNavBack": "BACK"
+    }
+  }
+}
