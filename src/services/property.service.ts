@@ -12,7 +12,7 @@ export class PropertyService {
 
   constructor(private httpClient: HttpClient) { }
 
-  requestServiceData(): Observable<Array<any>> {
+  requestServiceData(obj:any): Observable<Array<any>> {
 
     return new Observable(observer => {
 

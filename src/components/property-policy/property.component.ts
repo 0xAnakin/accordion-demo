@@ -15,7 +15,7 @@ export class PropertyPolicyComponent implements OnInit {
 
   ngOnInit() {
 
-    this.propertyService.requestServiceData().subscribe(res => {
+    this.propertyService.requestServiceData({}).subscribe(res => {
 
       this.data = res;
 

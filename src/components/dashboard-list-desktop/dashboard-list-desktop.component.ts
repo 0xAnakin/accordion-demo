@@ -35,12 +35,8 @@ export class DashboardListDesktopComponent {
 
   }
 
-  sanitizeURLParam(param: string) {
-    return param.replace(/[/]/g, "-");
-  }
-
   onRecordCLick($event: any, key: string, record: any) {
-    this.router.navigateByUrl(`/${key.toLowerCase()}/${this.sanitizeURLParam(record.PolicyNo)}`, { state: record });
+    this.router.navigate([`/${key.toLowerCase()}/${encodeURIComponent(record.PolicyNo)}`]);
   }
 
 }

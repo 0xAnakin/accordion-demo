@@ -15,7 +15,7 @@ export class LifePolicyComponent implements OnInit {
 
   ngOnInit() {
 
-    this.lifeService.requestServiceData().subscribe(res => {
+    this.lifeService.requestServiceData({}).subscribe(res => {
 
       this.data = res;
 

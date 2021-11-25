@@ -1,6 +1,6 @@
 <div class="dashboard-list-view-mobile">
   <div class="dashboard-policy-row mb-4" *ngFor="let key of objectKeys(data)">
-    <ng-container *ngTemplateOutlet="shouldBeRendered(key)?mobileShow:mobileHide; context:{key:key, data:data};">
+    <ng-container *ngTemplateOutlet="shouldBeRendered(key.toLowerCase())?mobileShow:mobileHide; context:{key:key, data:data};">
     </ng-container>
   </div>
 
