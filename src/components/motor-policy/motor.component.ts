@@ -83,4 +83,12 @@ export class MotorPolicyComponent implements OnInit {
 
   }
 
+  onSwitchChange($event: any) {
+    if ($event.currentTarget.checked) {
+      console.log('switch is ON');
+    } else {
+      console.log('switch is OFF');
+    }
+  }
+
 }

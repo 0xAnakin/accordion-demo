@@ -41,7 +41,7 @@
                 <p>e-policy</p>
                 <div class="switch">
                   <label>
-                    <input type="checkbox" />
+                    <input type="checkbox" (change)="onSwitchChange($event)"/>
                     <span class="lever"></span> {{policy.Consent}}
                   </label>
                 </div>

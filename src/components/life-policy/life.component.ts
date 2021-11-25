@@ -30,17 +30,17 @@ export class LifePolicyComponent implements OnInit {
         console.debug('policyNo:', policyNo);
 
         this.policiesService.requestServiceData().subscribe(policies => {
-          
+
           const tmp = this.toPlainObject(policies).Life;
 
           this.title = tmp.Dsc;
-          
+
           for (let i = 0; i < tmp.Policies.length; i++) {
-            
+
             if (tmp.Policies[i].PolicyNo === policyNo) {
 
               this.policy = tmp.Policies[i];
-              
+
               this.lifeService.requestServiceData(this.policy).subscribe(data => {
                 this.data = data;
               });
@@ -60,7 +60,7 @@ export class LifePolicyComponent implements OnInit {
   }
 
   formatDate(date: string) {
-    
+
     const arr = date.split("-");
 
     if (arr.length === 3) {
@@ -81,6 +81,14 @@ export class LifePolicyComponent implements OnInit {
 
     this.location.back();
 
+  }
+
+  onSwitchChange($event: any) {
+    if ($event.currentTarget.checked) {
+      console.log('switch is ON');
+    } else {
+      console.log('switch is OFF');
+    }
   }
 
 }
