@@ -1,6 +1,6 @@
 <div class="dashboard-list-view-desktop">
   <div class="dashboard-policy-row mb-4" *ngFor="let key of objectKeys(data)">
-    <ng-container *ngTemplateOutlet="shouldBeRendered(key)?desktopShow:desktopHide; context:{key:key, data:data};">
+    <ng-container *ngTemplateOutlet="shouldBeRendered(key.toLowerCase())?desktopShow:desktopHide; context:{key:key, data:data};">
     </ng-container>
   </div>
 
@@ -19,7 +19,7 @@
           <th>Κατάσταση</th>
           <th>e-policy</th>
         </tr>
-        <tr *ngFor="let record of data[key].Policies">
+        <tr class="dashboard-policy-record" *ngFor="let record of data[key].Policies">
           <td>{{record.Object}}</td>
           <td>{{record.PolicyNo}}</td>
           <td>{{formatDate(record.PolicyStart)}}</td>

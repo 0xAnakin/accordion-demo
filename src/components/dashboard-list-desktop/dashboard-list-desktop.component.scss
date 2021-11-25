@@ -10,6 +10,7 @@
       justify-content: flex-start;
       padding: 8px 16px;
       overflow: hidden;
+
       >.policy-icon {
         max-height: 85px;
         margin-right: 16px;
@@ -24,6 +25,7 @@
 
     .dashboard-policy-row-body {
       overflow: hidden;
+
       >table {
         table-layout: fixed;
         width: 100%;
@@ -31,6 +33,11 @@
         border-bottom: 1px solid lightgray;
 
         tr {
+          &.dashboard-policy-record {
+            &:hover {
+              cursor: pointer;
+            }
+          }
 
           th,
           td {

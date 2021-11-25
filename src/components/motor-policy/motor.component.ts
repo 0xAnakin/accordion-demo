@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Location } from '@angular/common';
 import { MotorService } from '../../services/motor.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class MotorPolicyComponent implements OnInit {
 
   data: any = [];
 
-  constructor(private motorService: MotorService) { }
+  constructor(private motorService: MotorService, private location: Location) { }
 
   ngOnInit() {
 
@@ -22,6 +23,14 @@ export class MotorPolicyComponent implements OnInit {
       console.debug('retrieved new motor data:', res);
 
     });
+
+  }
+
+  onPolicyNavBackClick($event: any) {
+
+    $event.preventDefault();
+    
+    this.location.back();
 
   }
 

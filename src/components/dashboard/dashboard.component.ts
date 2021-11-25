@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Location } from '@angular/common';
 import { PoliciesService } from '../../services/policies.service';
 
 @Component({
@@ -13,19 +14,37 @@ export class DashboardComponent implements OnInit {
   filters: any = [];
   data: any = [];
 
-  constructor(private policiesService: PoliciesService) { }
+  constructor(private policiesService: PoliciesService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   objectKeys = Object.keys;
 
   ngOnInit() {
 
+    this.activatedRoute.queryParams.subscribe(params => {
+
+      if (Array.isArray(params["filters"])) {
+        this.filters = params["filters"];
+      } else if (typeof params["filters"] === "string" && params["filters"].length) {
+        this.filters = [params["filters"]];
+      }
+
+      if (this.filters.length) {
+        this.view = "LIST";
+      }
+
+    });
+
     this.policiesService.requestServiceData().subscribe(res => {
 
       this.data = res;
 
-      console.debug('retrieved new policies data:', res);
+      console.debug("retrieved new policies data:", res);
 
     });
+
+  }
+
+  onGridBoxClick($event: any) {
 
   }
 
@@ -33,8 +52,8 @@ export class DashboardComponent implements OnInit {
 
     $event.preventDefault();
 
-    if (key === 'All') {
-      
+    if (key === "all") {
+
       if (this.filters.length) {
         this.filters = [];
       }
@@ -51,30 +70,51 @@ export class DashboardComponent implements OnInit {
 
     }
 
-    console.debug("active filters:", this.filters.join(', '));
+    this.updateQueryParams();
 
   }
 
-  onFilterRemoveClick($event:any, filter:string){
-    
+  onFilterRemoveClick($event: any, filter: string) {
+
     const idx = this.filters.indexOf(filter);
 
     if (idx > -1) {
       this.filters.splice(idx, 1);
     }
 
-    console.debug("active filters:", this.filters.join(', '));
+    this.updateQueryParams();
 
   }
 
   onGridViewClick($event: any) {
+
     this.view = "GRID";
+    this.filters = [];
+
+    this.updateQueryParams();
+
     console.debug("selected grid view");
+
   }
 
   onListViewClick($event: any) {
+
     this.view = "LIST";
+
     console.debug("selected list view");
+
+  }
+
+  updateQueryParams() {
+
+    if (this.filters.length) {
+      this.router.navigate([this.router.url.split("?")[0]], { queryParams: { filters: this.filters } });
+    } else {
+      this.router.navigate([this.router.url.split("?")[0]]);
+    }
+
+    console.debug("active filters:", this.filters ? this.filters : []);
+
   }
 
 }

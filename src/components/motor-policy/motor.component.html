@@ -1,1 +1,38 @@
-<app-accordion [nested]="false" [data]="data"></app-accordion>
+<div class="motor-policy-container">
+    <div class="row mb-3">
+        <div class="col-12">
+            <a href="#" class="policy-nav-back" (click)="onPolicyNavBackClick($event)">
+                <i class="fas fa-arrow-left"></i>
+                <span>ΕΠΙΣΤΡΟΦΗ</span>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="policy-header">
+                <div class="row m-0">
+                    <div class="p-0 col-12 col-md-2 policy-logo-col">
+                        <img src="/assets/images/dashboard-motor-policy.svg" />
+                        <h1>Αυτοκίνητο</h1>
+                    </div>
+                    <div class="p-0 col-12 col-md-10 policy-info-col">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>        
+                </div>                
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12">
+            <app-accordion [nested]="false" [data]="data"></app-accordion>
+        </div>
+    </div>
+</div>
+

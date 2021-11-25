@@ -16,9 +16,8 @@
               <img class="img-fluid z-depth-0" src="/assets/images/dashboard-policy-filter.svg" />
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#" *ngFor="let key of objectKeys(data)"
-                (click)="onFilterClick($event, key)">{{data[key].Dsc}}</a>
-              <a class="dropdown-item" href="#" (click)="onFilterClick($event, 'All')">Όλοι οι κλάδοι</a>
+              <a class="dropdown-item" href="#" *ngFor="let key of objectKeys(data)" (click)="onFilterClick($event, key.toLowerCase())">{{data[key].Dsc}}</a>
+              <a class="dropdown-item" href="#" (click)="onFilterClick($event, 'all')">Όλοι οι κλάδοι</a>
             </div>
           </div>
 

@@ -8,14 +8,14 @@ import { NotFoundComponent } from '../not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
-  { path: 'life', component: LifePolicyComponent },
-  { path: 'property', component: PropertyPolicyComponent },
-  { path: 'motor', component: MotorPolicyComponent },
+  { path: 'life/:id', component: LifePolicyComponent },
+  { path: 'property/:id', component: PropertyPolicyComponent },
+  { path: 'motor/:id', component: MotorPolicyComponent },  
   { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
+  imports: [RouterModule.forRoot(routes, { enableTracing: false })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
