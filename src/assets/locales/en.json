@@ -1,20 +1,25 @@
 {
   "EN": {
     "dashboard": {
-      "title":"My policies",
+      "title": "My policies",
       "filters": {
         "life": "Life and Health",
         "motor": "Automotive",
         "property": "Property"
       },
-      "list":{
+      "list": {
         "insured": "Insured",
         "policyNumber": "Pol. Number",
-        "startDate":"Starting Date",
-        "endDate":"Ending Date",
+        "startDate": "Starting Date",
+        "endDate": "Ending Date",
         "status": "Status",
-        "ePolicy":"e-policy"
-      }      
+        "ePolicy": "e-policy"
+      },
+      "bulletList": {
+        "first": "Only the valid contracts of the Life & Health, Car and Fire sectors are displayed.",
+        "second": "The application is being upgraded gradually and may not display all of your current insurance policies.",
+        "third": "Changes and payments in the last 48 hours may not appear here."
+      }
     },
     "policy": {
       "policyNavBack": "BACK"
