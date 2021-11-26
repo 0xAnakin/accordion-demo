@@ -14,13 +14,15 @@ export class DashboardComponent implements OnInit {
   filters: any = [];
   data: any = [];
 
-  constructor(public translationService:TranslationService, private policiesService: PoliciesService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(public translationService: TranslationService, private policiesService: PoliciesService, private router: Router, private activatedRoute: ActivatedRoute) {}
 
   objectKeys = Object.keys;
 
   ngOnInit() {
 
     this.activatedRoute.queryParams.subscribe(params => {
+
+      console.debug('query params updated:', params);
 
       if (Array.isArray(params["filters"])) {
         this.filters = params["filters"];
@@ -78,6 +80,7 @@ export class DashboardComponent implements OnInit {
 
     if (idx > -1) {
       this.filters.splice(idx, 1);
+      console.debug('removed filter:', filter);
     }
 
     this.updateQueryParams();
@@ -106,16 +109,28 @@ export class DashboardComponent implements OnInit {
   updateQueryParams() {
 
     if (this.filters.length) {
-      this.router.navigate([this.router.url.split("?")[0]], { queryParams: { filters: this.filters } });
+      
+     this.router.navigate([this.router.url.split("?")[0]], { queryParams: { filters: this.filters } }).then(res => {
+      console.log('Update case 1 success:', res);
+    }).catch(err=>{
+      console.log('Update case 1 failure:', err);
+    });
+     
     } else {
-      this.router.navigate([this.router.url.split("?")[0]]);
+      
+      this.router.navigate([this.router.url.split("?")[0]]).then(res => {
+        console.log('Update case 2 success:', res);
+      }).catch(err=>{
+        console.log('Update case 2 failure:', err);
+      });
+      
     }
 
     console.debug("active filters:", this.filters ? this.filters : []);
 
   }
 
-  getFilterLocalizationKey(filter:string="") {
+  getFilterLocalizationKey(filter: string = "") {
     return `dashboard.filters.${filter}`;
   }
 
