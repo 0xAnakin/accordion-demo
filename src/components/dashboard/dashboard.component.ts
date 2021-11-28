@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
   filters: any = [];
   data: any = [];
 
-  constructor(public translationService: TranslationService, private policiesService: PoliciesService, private router: Router, private activatedRoute: ActivatedRoute) {}
+  constructor(public translationService: TranslationService, private policiesService: PoliciesService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   objectKeys = Object.keys;
 
@@ -22,15 +22,9 @@ export class DashboardComponent implements OnInit {
 
     this.activatedRoute.queryParams.subscribe(params => {
 
-      console.debug('query params updated:', params);
+      console.debug('query params keys:', Object.keys(params));
 
-      if (Array.isArray(params["filters"])) {
-        this.filters = params["filters"];
-      } else if (typeof params["filters"] === "string" && params["filters"].length) {
-        this.filters = [params["filters"]];
-      } else {
-        this.filters = [];
-      }
+      this.filters = Object.keys(params);
 
       if (this.filters.length) {
         this.view = "LIST";
@@ -109,24 +103,19 @@ export class DashboardComponent implements OnInit {
   updateQueryParams() {
 
     if (this.filters.length) {
-      
-     this.router.navigate([this.router.url.split("?")[0]], { queryParams: { filters: this.filters } }).then(res => {
-      console.log('Update case 1 success:', res);
-    }).catch(err=>{
-      console.log('Update case 1 failure:', err);
-    });
-     
+
+      this.router.navigate([this.router.url.split("?")[0]], {
+        queryParams: this.filters.reduce((acc: any, val: string, idx: number, arr: any) => {
+          acc[val] = 1;
+          return acc;
+        }, {})
+      })
+
     } else {
-      
-      this.router.navigate([this.router.url.split("?")[0]]).then(res => {
-        console.log('Update case 2 success:', res);
-      }).catch(err=>{
-        console.log('Update case 2 failure:', err);
-      });
-      
+      this.router.navigate([this.router.url.split("?")[0]]);
     }
 
-    console.debug("active filters:", this.filters ? this.filters : []);
+    console.debug("active filters:", this.filters);
 
   }
 

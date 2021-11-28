@@ -13,7 +13,7 @@ export class DashboardGridComponent {
   objectKeys = Object.keys;
 
   formatDate(date: string) {
-    
+
     const arr = date.split("-");
 
     if (arr.length === 3) {
@@ -21,7 +21,11 @@ export class DashboardGridComponent {
     }
 
     return date;
-    
+
   }
-  
+
+  generateQueryParams(key: string) {
+    return { [key]: 1 };
+  }
+
 }
