@@ -1,0 +1,17 @@
+<div class="custom-section-table">
+  <table cellpadding="0" cellspacing="0">
+    <tr *ngFor="let row of convert(data)">
+      <td *ngFor="let cell of row">
+        <div class="cell-content cell-text" *ngIf="isText(cell)">{{cell}}</div>
+        <div class="cell-content cell-link" *ngIf="!isText(cell)">
+          <a href="#{{cell.metaData.paymentCode}}" class="btn btn-primary"
+            *ngIf="cell.type == 'button'" mdbWavesEffect mdbBtn>{{cell.label}}</a>
+          <a href="#{{cell.metaData.docCategory}}-{{cell.metaData.policyNo}}-{{cell.metaData.transaction}}"
+            class="pdf-download" *ngIf="cell.type == 'icon'">
+            <img src="../../assets/images/pdf-download-icon.svg" />
+          </a>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

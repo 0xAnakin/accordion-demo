@@ -13,6 +13,7 @@ export class AccordionEntryComponent implements OnInit {
 
   ngOnInit() {
     this.collapsed = !(this.entry.expanded as boolean);
+    console.debug("expanded:", this.entry.expanded, "collapsed:", this.collapsed);
   }
 
   onClick($event: any) {
@@ -34,6 +35,10 @@ export class AccordionEntryComponent implements OnInit {
       this.collapsed = !this.collapsed;
     })
 
+  }
+
+  printJSON(entry: any) {
+    return JSON.stringify(entry, null, 4);
   }
 
 }

@@ -1,0 +1,96 @@
+@import "./switch.mdb";
+
+.custom-accordion {
+  &.custom-accordion-parent {
+    >app-accordion-entry {
+      &:nth-child(1) {
+        .custom-accordion-entry {
+          .custom-accordion-head {
+            &:before {
+              background: transparent url(../assets/images/accordion-icon-time.svg) center center no-repeat !important;
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .custom-accordion-entry {
+
+          .custom-accordion-head {
+            &:before {
+              background: transparent url(../assets/images/accordion-icon-info.svg) center center no-repeat !important;
+            }
+          }
+        }
+      }
+
+      >.custom-accordion-entry {
+
+        >.custom-accordion-head {
+          padding: 24px;
+
+          &:before {
+            content: '';
+            display: inline-block;
+            background: transparent url(../assets/images/accordion-icon-generic.svg) center center no-repeat;
+            width: 24px;
+            height: 24px;
+          }
+
+          h1 {
+            font: normal normal 500 24px/30px "lato", lato, sans-serif;
+            letter-spacing: 0px;
+            color: #000000DE;
+            margin: 0 auto 0 16px;
+            padding: 0;
+          }
+        }
+
+        >.custom-accordion-body {
+          .custom-accordion-body-inner {
+            border-top: 1px solid #0000001F;
+          }
+        }
+
+      }
+    }
+  }
+
+  &.custom-accordion-child {
+    >app-accordion-entry {
+      &:last-child {
+        >.custom-accordion-entry {
+          .custom-accordion-body {
+            border-bottom: none;
+          }
+        }
+      }
+
+      >.custom-accordion-entry {
+        box-shadow: none;
+        margin-bottom: 0;
+
+        .custom-accordion-head {
+          padding: 24px;
+
+          h1 {
+            font: normal normal normal 20px/25px "lato", lato, sans-serif;
+            letter-spacing: 0.26px;
+            color: #0E70C7;
+            margin: 0;
+            padding: 0;
+          }
+        }
+
+        .custom-accordion-body {
+          border-bottom: 1px solid #0000001F;
+
+          .custom-accordion-body-inner {
+            border-top: none;
+          }
+        }
+      }
+
+    }
+  }
+}

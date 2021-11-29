@@ -1,0 +1,60 @@
+.custom-section-table {
+  padding: 0 24px 24px 24px;
+
+  >table {
+
+    width: 100%;
+
+    >tr {
+      &:first-child {
+        >td {
+
+          border-top: 1px solid #0000001F;
+          border-bottom: 1px solid #0000001F;
+
+          .cell-text {
+            font: normal normal normal 14px/20px "lato", lato, sans-serif;
+            letter-spacing: 0.09px;
+            color: #00000099;
+          }
+        }
+      }
+
+      >td {
+        padding: 16px 4px;
+
+        &:first-child {
+          text-align: left;
+        }
+
+        text-align: right;
+        vertical-align: middle;
+
+        .cell-text {
+          font: normal normal bold 14px/20px "lato",
+            lato,
+            sans-serif;
+          letter-spacing: 0.09px;
+          color: #000000DE;
+        }
+
+        .cell-link {
+          .btn {
+            text-align: center;
+            font-size: 14px;
+            line-height: 20px;
+            font-family: "lato", lato, sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.42px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            margin: 0 4px;
+            padding: .84rem 1rem .625rem;
+            border-radius: 4px;
+            background-color: #0E70C7 !important;
+          }
+        }
+      }
+    }
+  }
+}

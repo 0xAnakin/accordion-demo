@@ -5,13 +5,11 @@
   </div>
   <div class="custom-accordion-body">
     <div class="custom-accordion-body-inner">
-      <div *ngIf="entry.groups?.length > 1; then nestedBlock else normalBlock"></div>
-      <ng-template #nestedBlock>
-         <app-accordion [nested]="true" [data]="entry.groups"></app-accordion>
-      </ng-template>
-      <ng-template #normalBlock>
-        <app-accordion-entry-content [data]="entry.sections"></app-accordion-entry-content>
-      </ng-template>
+
+      <app-accordion [nested]="true" [data]="entry.groups" *ngIf="entry.groups?.length>1;"></app-accordion>
+      <app-accordion-entry-sections [data]="entry.groups[0]?.sections" *ngIf="entry.groups?.length == 1 && entry.groups[0].sections?.length>0;"></app-accordion-entry-sections>
+      <app-accordion-entry-sections [data]="entry.sections" *ngIf="entry.sections?.length > 0;"></app-accordion-entry-sections>
+
     </div>
   </div>
 </div>

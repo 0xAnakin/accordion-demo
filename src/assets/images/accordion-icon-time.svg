@@ -1,0 +1,14 @@
+<svg id="Component_88_6" data-name="Component 88 – 6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path id="Path_32517" data-name="Path 32517" d="M4817.4,10732.8h7.793v3.341H4817.4Z" transform="translate(-4813.886 -10714.524)" fill="#004a92"/>
+  <g id="Group_7880" data-name="Group 7880" transform="translate(-40 -516)">
+    <rect id="Rectangle_4049" data-name="Rectangle 4049" width="24" height="24" transform="translate(40 516)" fill="none"/>
+    <g id="Group_7879" data-name="Group 7879">
+      <path id="Path_32516" data-name="Path 32516" d="M6,2V7.217h.009L6,7.226l3.478,3.469L6,14.173l.009.009H6V19.39H16.434V14.181h-.009l.009-.009-3.478-3.478,3.478-3.469-.009-.009h.009V2Zm8.695,12.607v3.043H7.739V14.607l3.478-3.478ZM11.217,10.26,7.739,6.782V3.739h6.956V6.782Z" transform="translate(36.401 519.021)" fill="#004a92"/>
+      <path id="Path_32352" data-name="Path 32352" d="M15.59,7H5.8A4.1,4.1,0,0,0,2,11.347a4.1,4.1,0,0,0,3.8,4.347h9.79a4.1,4.1,0,0,0,3.8-4.347A4.1,4.1,0,0,0,15.59,7Z" transform="translate(43.431 511.333)" fill="#004a92"/>
+      <g id="baseline-euro_symbol-24px" transform="translate(49.778 518.333)">
+        <path id="Path_246" data-name="Path 246" d="M7.347,8.615A2.348,2.348,0,0,1,5.261,7.347H7.347V6.623H5.022a2.279,2.279,0,0,1,0-.725H7.347V5.174H5.261a2.35,2.35,0,0,1,3.619-.7l.641-.641a3.256,3.256,0,0,0-5.246,1.34H3V5.9H4.109a3.03,3.03,0,0,0,0,.725H3v.725H4.275a3.256,3.256,0,0,0,5.246,1.34l-.645-.641A2.321,2.321,0,0,1,7.347,8.615Z" transform="translate(-1.913 -1.913)" fill="#fff"/>
+        <path id="Path_247" data-name="Path 247" d="M0,0H8.695V8.695H0Z" transform="translate(0)" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

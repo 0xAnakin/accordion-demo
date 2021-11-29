@@ -14,7 +14,10 @@ import { PropertyPolicyComponent } from '../property-policy/property.component';
 import { MotorPolicyComponent } from '../motor-policy/motor.component';
 import { AccordionComponent } from '../accordion/accordion.component';
 import { AccordionEntryComponent } from '../accordion-entry/accordion-entry.component';
-import { AccordionEntryContentComponent } from '../accordion-entry-content/accordion-entry-content.component';
+import { AccordionEntrySectionsComponent } from '../accordion-entry-sections/accordion-entry-sections.component';
+import { SectionFieldsComponent } from '../section-fields/section-fields.component';
+import { SectionTableComponent } from '../section-table/section-table.component';
+import { SectionSubtitleComponent } from '../section-subtitle/section-subtitle.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { AccordionEntryContentComponent } from '../accordion-entry-content/accor
     MotorPolicyComponent,
     AccordionComponent,
     AccordionEntryComponent,
-    AccordionEntryContentComponent
+    AccordionEntrySectionsComponent,
+    SectionFieldsComponent,
+    SectionTableComponent,
+    SectionSubtitleComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),

@@ -1,21 +1,21 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AccordionEntryContentComponent } from './accordion-entry-content.component';
+import { SectionSubtitleComponent } from './section-subtitle.component';
 
-describe('AccordionEntryContentComponent', () => {
+describe('SectionSubtitleComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
       ],
       declarations: [
-        AccordionEntryContentComponent
+        SectionSubtitleComponent
       ],
     }).compileComponents();
   });
 
   it('should get created', () => {
-    const fixture = TestBed.createComponent(AccordionEntryContentComponent);
+    const fixture = TestBed.createComponent(SectionSubtitleComponent);
     const accordion = fixture.componentInstance;
     expect(accordion).toBeTruthy();
   });
