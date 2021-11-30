@@ -7,7 +7,9 @@
     <div class="custom-accordion-body-inner">
 
       <app-accordion [nested]="true" [data]="entry.groups" *ngIf="entry.groups?.length>1;"></app-accordion>
+
       <app-accordion-entry-sections [data]="entry.groups[0]?.sections" *ngIf="entry.groups?.length == 1 && entry.groups[0].sections?.length>0;"></app-accordion-entry-sections>
+      <app-accordion-entry-sections [data]="entry.sections[0]?.order" *ngIf="entry.sections?.length > 0 && entry.sections[0]?.order?.length > 0;"></app-accordion-entry-sections>
       <app-accordion-entry-sections [data]="entry.sections" *ngIf="entry.sections?.length > 0;"></app-accordion-entry-sections>
 
     </div>
