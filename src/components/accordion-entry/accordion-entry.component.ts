@@ -27,10 +27,6 @@ export class AccordionEntryComponent implements OnInit {
 
   }
 
-  isOpen() {
-    return this.open;
-  }
-
   onClick($event: any) {
 
     const entry = $event.target.closest('.custom-accordion-entry');
