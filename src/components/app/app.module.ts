@@ -18,6 +18,7 @@ import { AccordionEntrySectionsComponent } from '../accordion-entry-sections/acc
 import { SectionFieldsComponent } from '../section-fields/section-fields.component';
 import { SectionTableComponent } from '../section-table/section-table.component';
 import { SectionSubtitleComponent } from '../section-subtitle/section-subtitle.component';
+import { SectionNotesComponent } from '../section-notes/section-notes.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SectionSubtitleComponent } from '../section-subtitle/section-subtitle.c
     AccordionEntrySectionsComponent,
     SectionFieldsComponent,
     SectionTableComponent,
-    SectionSubtitleComponent
+    SectionSubtitleComponent,
+    SectionNotesComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
