@@ -10,7 +10,7 @@ export class SectionSubtitleComponent implements OnInit {
   @Input() data: any;
 
   ngOnInit(){
-    console.debug("subtitile section:", this.data);
+    // console.debug("subtitile section:", this.data);
   }
 
   printJSON(entry: any) {

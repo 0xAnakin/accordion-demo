@@ -9,11 +9,26 @@ export class AccordionEntryComponent implements OnInit {
 
   @Input() entry: any;
 
-  collapsed = true;
+  open: boolean = false;
 
   ngOnInit() {
-    this.collapsed = !(this.entry.expanded as boolean);
-    console.debug("expanded:", this.entry.expanded, "collapsed:", this.collapsed);
+
+    try {
+
+      if (typeof this.entry.expanded === 'string') {
+        this.open = JSON.parse(this.entry.expanded);
+      } else if (typeof this.entry.expanded === 'boolean') {
+        this.open = this.entry.expanded;
+      }
+
+    } catch(err) {
+      console.debug('invalid expanded value for entry', this.entry)
+    }
+
+  }
+
+  isOpen() {
+    return this.open;
   }
 
   onClick($event: any) {
@@ -32,7 +47,7 @@ export class AccordionEntryComponent implements OnInit {
     }
 
     requestAnimationFrame(() => {
-      this.collapsed = !this.collapsed;
+      this.open = !this.open;
     })
 
   }

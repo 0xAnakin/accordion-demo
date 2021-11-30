@@ -4,9 +4,9 @@
       <td *ngFor="let cell of row">
         <div class="cell-content cell-text" *ngIf="isText(cell)">{{cell}}</div>
         <div class="cell-content cell-link" *ngIf="!isText(cell)">
-          <a href="#{{cell.metaData.paymentCode}}" class="btn btn-primary"
+          <a href="{{cell.webPayUrl}}" class="btn btn-primary"
             *ngIf="cell.type == 'button'" mdbWavesEffect mdbBtn>{{cell.label}}</a>
-          <a href="#{{cell.metaData.docCategory}}-{{cell.metaData.policyNo}}-{{cell.metaData.transaction}}"
+          <a href="{{cell.downloadUrl}}"
             class="pdf-download" *ngIf="cell.type == 'icon'">
             <img src="../../assets/images/pdf-download-icon.svg" />
           </a>

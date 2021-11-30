@@ -10,7 +10,7 @@ export class SectionFieldsComponent implements OnInit {
   @Input() data: any;
 
   ngOnInit(){
-    console.debug("fields section:", this.data);
+    // console.debug("fields section:", this.data);
   }
 
   printJSON(entry: any) {

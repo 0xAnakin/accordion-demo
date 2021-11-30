@@ -10,7 +10,7 @@ export class SectionNotesComponent implements OnInit {
   @Input() data: any;
 
   ngOnInit(){
-    console.debug("notes section:", this.data);
+    // console.debug("notes section:", this.data);
   }
 
   printJSON(entry: any) {

@@ -131,7 +131,6 @@
                                 "rows": [
                                     {
                                         "value": {
-                                            "webPayUrl": "https://sample.ethniki-asfalistiki.gr/webpay?l=el&k=01471902050282162920&s=myethniki:YXZC33ePRsZgYujyg3FqtIssQLVmNmLnmUBfPilTCaI=&u=aHR0cDovL2xvY2FsaG9zdDo4MDgwL2dyb3VwL215ZXRobmlraS9kYXNoYm9hcmQ=",
                                             "metaData": {
                                                 "paymentCode": "01471902050282162920"
                                             },
@@ -142,7 +141,6 @@
                                     },
                                     {
                                         "value": {
-                                            "webPayUrl": "https://sample.ethniki-asfalistiki.gr/webpay?l=el&k=02521902050282162920&s=myethniki:1YDZ1gyUzGIrAJEQZnO5YUah5ChBzz9-JJDa8Gp0MXs=&u=aHR0cDovL2xvY2FsaG9zdDo4MDgwL2dyb3VwL215ZXRobmlraS9kYXNoYm9hcmQ=",
                                             "metaData": {
                                                 "paymentCode": "02521902050282162920"
                                             },
@@ -153,7 +151,6 @@
                                     },
                                     {
                                         "value": {
-                                            "webPayUrl": "https://sample.ethniki-asfalistiki.gr/webpay?l=el&k=05231902050282162920&s=myethniki:jQINZjiCezHPQpmEWiY1iN4znjAcarCTQLRR7PHyqvs=&u=aHR0cDovL2xvY2FsaG9zdDo4MDgwL2dyb3VwL215ZXRobmlraS9kYXNoYm9hcmQ=",
                                             "metaData": {
                                                 "paymentCode": "05231902050282162920"
                                             },
@@ -174,7 +171,6 @@
                                                 "policyNo": "902821",
                                                 "transaction": "38018"
                                             },
-                                            "downloadUrl": "/c/portal/downloadFile?transaction=38018",
                                             "icon": "download",
                                             "label": "",
                                             "type": "icon"
@@ -187,7 +183,6 @@
                                                 "policyNo": "046355",
                                                 "transaction": "38018"
                                             },
-                                            "downloadUrl": "/c/portal/downloadFile?transaction=38018",
                                             "icon": "download",
                                             "label": "",
                                             "type": "icon"
@@ -200,7 +195,6 @@
                                                 "policyNo": "190863",
                                                 "transaction": "18052"
                                             },
-                                            "downloadUrl": "/c/portal/downloadFile?transaction=18052",
                                             "icon": "download",
                                             "label": "",
                                             "type": "icon"

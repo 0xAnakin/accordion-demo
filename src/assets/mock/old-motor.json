@@ -51,7 +51,6 @@
                                 "rows": [
                                     {
                                         "value": {
-                                            "webPayUrl": "https://sample.ethniki-asfalistiki.gr/webpay?l=el&k=96099580002502662921&s=myethniki:tOiB9kbHR3xnEjvXmRKATrT01JHRcRRG2NQjCWJ1u78=&u=aHR0cDovL2xvY2FsaG9zdDo4MDgwL2dyb3VwL215ZXRobmlraS9kYXNoYm9hcmQ=",
                                             "metaData": {
                                                 "paymentCode": "96099580002502662921"
                                             },
@@ -70,9 +69,8 @@
                                             "metaData": {
                                                 "docCategory": "AUTO_RENEWAL_NOTIFICATION",
                                                 "policyNo": "60995800",
-                                                "transaction": "1286564"
+                                                "transaction": "1286564\""
                                             },
-                                            "downloadUrl": "/c/portal/downloadFile?transaction=1286564",
                                             "icon": "download",
                                             "label": "",
                                             "type": "icon"

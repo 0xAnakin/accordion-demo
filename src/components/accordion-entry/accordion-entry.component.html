@@ -1,7 +1,7 @@
-<div class="custom-accordion-entry" [class]="collapsed ? 'custom-accordion-entry collapsed': 'custom-accordion-entry'">
+<div class="custom-accordion-entry" [class]="open ? 'custom-accordion-entry': 'custom-accordion-entry collapsed'">
   <div class="custom-accordion-head" (click)="onClick($event)">
     <h1>{{entry.title}}</h1>
-    <i [class]="collapsed ? 'fas fa-chevron-down': 'fas fa-chevron-up'"></i>
+    <i [class]="open ? 'fas fa-chevron-up': 'fas fa-chevron-down'"></i>
   </div>
   <div class="custom-accordion-body">
     <div class="custom-accordion-body-inner">

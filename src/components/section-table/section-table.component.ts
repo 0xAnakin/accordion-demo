@@ -10,7 +10,7 @@ export class SectionTableComponent implements OnInit {
   @Input() data: any;
 
   ngOnInit() {
-    console.debug("table section:", this.data);
+    // console.debug("table section:", this.data);
   }
 
   convert(data: any) {
@@ -32,7 +32,7 @@ export class SectionTableComponent implements OnInit {
       return converted.map(row => row[column])
     });
 
-    console.debug('transposed:', transposed);
+    // console.debug('transposed:', transposed);
 
     return transposed;
 
