@@ -22,7 +22,7 @@ export class AccordionEntryComponent implements OnInit {
       }
 
     } catch(err) {
-      console.debug('invalid expanded value for entry', this.entry)
+      console.warn('invalid expanded value for entry', this.entry)
     }
 
   }
