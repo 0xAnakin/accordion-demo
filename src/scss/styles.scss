@@ -85,9 +85,10 @@
         margin-bottom: 0;
 
         .custom-accordion-head {
-          position:relative;
+          border-bottom: 1px solid #0000001F;
+          position: relative;
           padding: 24px;
-          
+
           &:after {
             content: '';
             display: inline-block;
@@ -111,9 +112,8 @@
         }
 
         .custom-accordion-body {
-          border-bottom: 1px solid #0000001F;
-
           .custom-accordion-body-inner {
+            border-bottom: 1px solid #0000001F;
             border-top: none;
           }
         }

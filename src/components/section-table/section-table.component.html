@@ -1,17 +1,27 @@
 <div class="custom-section-table">
-  <table cellpadding="0" cellspacing="0">
-    <tr *ngFor="let row of convert(data)">
-      <td *ngFor="let cell of row">
-        <div class="cell-content cell-text" *ngIf="isText(cell)">{{cell}}</div>
-        <div class="cell-content cell-link" *ngIf="!isText(cell)">
-          <a href="{{cell.webPayUrl}}" class="btn btn-primary"
-            *ngIf="cell.type == 'button'" mdbWavesEffect mdbBtn>{{cell.label}}</a>
-          <a href="{{cell.downloadUrl}}"
-            class="pdf-download" *ngIf="cell.type == 'icon'">
-            <img src="../../assets/images/pdf-download-icon.svg" />
-          </a>
-        </div>
-      </td>
-    </tr>
-  </table>
+
+  <div *ngIf="deviceWidth > 767; then desktopBlock else mobileBlock"></div>
+  <ng-template #desktopBlock>
+
+    <table cellpadding="0" cellspacing="0">
+      <tr *ngFor="let row of convert(data)">
+        <td *ngFor="let cell of row">
+          <div class="cell-content cell-text" *ngIf="cell.length">{{cell}}</div>
+          <div class="cell-content cell-link" *ngIf="cell.type == 'button'">
+            <a href="{{cell.webPayUrl}}" class="btn btn-primary" mdbWavesEffect mdbBtn>{{cell.label}}</a>
+          </div>
+          <div class="cell-content cell-link" *ngIf="cell.type == 'icon'">
+            <a href="{{cell.downloadUrl}}" class="pdf-download">
+              <img src="../../assets/images/pdf-download-icon.svg" />
+            </a>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+  </ng-template>
+  <ng-template #mobileBlock>
+    <h1>MOBILE</h1>
+  </ng-template>
+
 </div>

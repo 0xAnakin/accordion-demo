@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ResizeService } from 'src/services/resize.service';
 
 @Component({
   selector: 'app-section-table',
@@ -9,8 +10,17 @@ export class SectionTableComponent implements OnInit {
 
   @Input() data: any;
 
+  deviceWidth: number = window.innerWidth;
+
+  constructor(private resizeService: ResizeService) { }
+
   ngOnInit() {
+    this.resizeService.onResize$.subscribe(() => this.onWindowResize());
     // console.debug("table section:", this.data);
+  }
+
+  onWindowResize() {
+    this.deviceWidth = window.innerWidth;
   }
 
   convert(data: any) {
@@ -36,10 +46,6 @@ export class SectionTableComponent implements OnInit {
 
     return transposed;
 
-  }
-
-  isText(obj:any) {
-    return typeof obj === 'string';
   }
 
   printJSON(entry: any) {
