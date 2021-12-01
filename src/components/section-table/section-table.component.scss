@@ -36,6 +36,7 @@
         vertical-align: middle;
 
         .cell-text {
+          white-space: normal;
           font: normal normal bold 14px/20px "lato",
             lato,
             sans-serif;
@@ -62,4 +63,81 @@
       }
     }
   }
+
+  >.custom-table-records {
+    overflow-y: hidden;
+
+    >.custom-table-records-inner {
+      font-size: 0;
+      overflow: auto;
+      white-space: nowrap;
+      padding: 0 24px;
+      transform: translateY(20px);
+      padding-bottom: 20px;
+      margin-top: -20px;
+
+      >.custom-table-record {
+        margin-right: 16px;
+        margin-bottom: 16px;
+        padding: 16px;
+        width: 65vw;
+        vertical-align: top;
+        display: inline-block;
+        font-size: initial;
+        background-color: #f5f7fb;
+        box-shadow: 0px 0px 4px #00000029;
+        border-radius: 4px;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        >.custom-table-record-row {
+          margin-bottom: 8px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &.row-icon,
+          &.row-button {
+            display: inline-block;
+            margin-bottom: 0;
+          }
+
+          >.row-label {
+            font: normal normal normal 14px/20px "lato", lato, sans-serif;
+            letter-spacing: 0.09px;
+            color: #00000099;
+          }
+
+          >.row-text {
+            white-space: normal;
+            font: normal normal 600 14px/20px "lato", lato, sans-serif;
+            letter-spacing: 0.09px;
+            color: #000000;
+          }
+
+          >.row-link {
+            .btn {
+              text-align: center;
+              font-size: 14px;
+              line-height: 20px;
+              font-family: "lato", lato, sans-serif;
+              font-weight: 600;
+              letter-spacing: 0.42px;
+              color: #FFFFFF;
+              text-transform: uppercase;
+              margin: 0 16px 0 0;
+              padding: .84rem 1rem .625rem;
+              border-radius: 4px;
+              background-color: #0E70C7 !important;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
 }

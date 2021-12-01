@@ -23,7 +23,7 @@ export class SectionTableComponent implements OnInit {
     this.deviceWidth = window.innerWidth;
   }
 
-  convert(data: any) {
+  convertDesktop(data: any) {
 
     const converted = new Array();
 
@@ -42,9 +42,30 @@ export class SectionTableComponent implements OnInit {
       return converted.map(row => row[column])
     });
 
-    // console.debug('transposed:', transposed);
+    console.debug('transposed:', transposed);
 
     return transposed;
+
+  }
+
+  convertMobile(data: any) {
+
+    const orig_data = this.convertDesktop(data);
+    const arr = new Array();
+
+    for (let x = 1; x < orig_data.length; x++) {
+      arr.push([]);
+      for (let y = 0; y < orig_data[x].length; y++) {
+
+        arr[arr.length - 1].push({
+          label: orig_data[0][y],
+          data: orig_data[x][y]
+        });
+
+      }
+    }
+    
+    return arr;
 
   }
 

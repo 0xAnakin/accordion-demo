@@ -4,13 +4,13 @@
   <ng-template #desktopBlock>
 
     <table cellpadding="0" cellspacing="0">
-      <tr *ngFor="let row of convert(data)">
+      <tr *ngFor="let row of convertDesktop(data)">
         <td *ngFor="let cell of row">
           <div class="cell-content cell-text" *ngIf="cell.length">{{cell}}</div>
-          <div class="cell-content cell-link" *ngIf="cell.type == 'button'">
+          <div class="cell-content cell-link cell-button" *ngIf="cell.type == 'button'">
             <a href="{{cell.webPayUrl}}" class="btn btn-primary" mdbWavesEffect mdbBtn>{{cell.label}}</a>
           </div>
-          <div class="cell-content cell-link" *ngIf="cell.type == 'icon'">
+          <div class="cell-content cell-link cell-icon" *ngIf="cell.type == 'icon'">
             <a href="{{cell.downloadUrl}}" class="pdf-download">
               <img src="../../assets/images/pdf-download-icon.svg" />
             </a>
@@ -21,7 +21,27 @@
 
   </ng-template>
   <ng-template #mobileBlock>
-    <h1>MOBILE</h1>
+    
+    <div class="custom-table-records">
+      <div class="custom-table-records-inner">
+        <div class="custom-table-record" *ngFor="let record of convertMobile(data)">
+          <div [class]="row.data.type == 'icon' ? 'custom-table-record-row row-icon' : (row.data.type == 'button' ? 'custom-table-record-row row-button' : 'custom-table-record-row')" *ngFor="let row of record">
+            <div class="row-label">{{row.label}}</div>
+            <div class="row-text" *ngIf="row.data.length">{{row.data}}</div>
+            <div class="row-link" *ngIf="row.data.type == 'button'">
+              <a href="{{row.data.webPayUrl}}" class="btn btn-primary" mdbWavesEffect mdbBtn>{{row.data.label}}</a>
+            </div>
+            <div class="row-link" *ngIf="row.data.type == 'icon'">
+              <a href="{{row.data.downloadUrl}}" class="pdf-download">
+                <img src="../../assets/images/pdf-download-icon.svg" />
+              </a>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </ng-template>
 
 </div>
