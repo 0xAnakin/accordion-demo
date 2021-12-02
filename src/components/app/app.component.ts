@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ResizeService } from '../../services/resize.service';
+import { ResizeService } from 'src/services/resize.service';
 
 @Component({
   selector: 'app-root',

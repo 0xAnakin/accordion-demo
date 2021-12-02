@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { PoliciesService } from '../../services/policies.service';
-import { PropertyService } from '../../services/property.service';
+import { PoliciesService } from 'src/services/policies.service';
+import { PropertyService } from 'src/services/property.service';
 import { TranslationService } from 'src/services/translation.service';
 
 @Component({

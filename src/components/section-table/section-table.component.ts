@@ -42,7 +42,7 @@ export class SectionTableComponent implements OnInit {
       return converted.map(row => row[column])
     });
 
-    console.debug('transposed:', transposed);
+    // console.debug('transposed:', transposed);
 
     return transposed;
 

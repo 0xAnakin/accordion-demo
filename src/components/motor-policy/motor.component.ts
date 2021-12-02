@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { PoliciesService } from '../../services/policies.service';
-import { MotorService } from '../../services/motor.service';
+import { PoliciesService } from 'src/services/policies.service';
+import { MotorService } from 'src/services/motor.service';
 import { TranslationService } from 'src/services/translation.service';
 
 @Component({
