@@ -23,7 +23,7 @@
 
           <ul class="dashboard-active-policy-filters" *ngFor="let filter of filters">
             <li>
-              <span>{{translationService.i18n[getFilterLocalizationKey(filter)]}}</span>
+              <span>{{translationService.i18n.dashboard.filters[filter]}}</span>
               <i (click)="onFilterRemoveClick($event, filter)" class="fas fa-times-circle"></i>
             </li>
           </ul>

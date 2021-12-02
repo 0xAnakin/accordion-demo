@@ -119,8 +119,4 @@ export class DashboardComponent implements OnInit {
 
   }
 
-  getFilterLocalizationKey(filter: string = "") {
-    return `dashboard.filters.${filter}`;
-  }
-
 }
