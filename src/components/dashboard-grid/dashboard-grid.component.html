@@ -4,7 +4,9 @@
       <a class="policy-link" routerLink="" [queryParams]="generateQueryParams(key.toLowerCase())">
         <div class="policy-icon-container">
           <span class="policy-badge badge badge-pill badge-primary">{{data[key].Policies?.length}}</span>
-          <img class="policy-icon" src="/assets/images/dashboard-{{key.toLowerCase()}}-policy.svg" />
+          <img class="policy-icon" src="/assets/images/dashboard-life-policy.svg" *ngIf="key.toLowerCase() == 'life'"/>
+          <img class="policy-icon" src="/assets/images/dashboard-motor-policy.svg" *ngIf="key.toLowerCase() == 'motor'"/>
+          <img class="policy-icon" src="/assets/images/dashboard-property-policy.svg" *ngIf="key.toLowerCase() == 'property'"/>
         </div>
         <h2 class="policy-name">{{data[key].Dsc}}</h2>
       </a>

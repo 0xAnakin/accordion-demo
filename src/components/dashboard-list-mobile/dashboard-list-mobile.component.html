@@ -6,7 +6,9 @@
 
   <ng-template #mobileShow let-key="key" let-data="data">
     <div class="dashboard-policy-row-head mb-3">
-      <img class="policy-icon" src="/assets/images/dashboard-{{key.toLowerCase()}}-policy.svg" />
+      <img class="policy-icon" src="/assets/images/dashboard-life-policy.svg" *ngIf="key.toLowerCase() == 'life'"/>
+      <img class="policy-icon" src="/assets/images/dashboard-motor-policy.svg" *ngIf="key.toLowerCase() == 'motor'"/>
+      <img class="policy-icon" src="/assets/images/dashboard-property-policy.svg" *ngIf="key.toLowerCase() == 'property'"/>
       <h2 class="policy-name">{{data[key].Dsc}}</h2>
     </div>
     <div class="dashboard-policy-row-body">
