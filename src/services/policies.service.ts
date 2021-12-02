@@ -7,7 +7,6 @@ import { Observable } from 'rxjs';
 })
 export class PoliciesService {
 
-  private url = 'http://localhost:4200/assets/mock/policies.json';
   private data: any;
 
   constructor(private httpClient: HttpClient) { }
@@ -21,7 +20,7 @@ export class PoliciesService {
         return observer.complete();
       }
 
-      return this.httpClient.get(this.url).subscribe(res => {
+      return this.httpClient.get('http://localhost:4200/assets/mock/policies.json').subscribe(res => {
 
         this.data = res;
 

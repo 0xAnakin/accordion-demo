@@ -7,12 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class LifeService {
 
-  private url = 'http://localhost:4200/assets/mock/life.json';
   private data: any;
 
   constructor(private httpClient: HttpClient) { }
 
-  requestServiceData(obj:any): Observable<Array<any>> {
+  requestServiceData(policy:any): Observable<Array<any>> {
 
     return new Observable(observer => {
 
@@ -21,7 +20,7 @@ export class LifeService {
         return observer.complete();
       }
 
-      return this.httpClient.get(this.url).subscribe(res => {
+      return this.httpClient.get('http://localhost:4200/assets/mock/life.json').subscribe(res => {
 
         this.data = res;
 

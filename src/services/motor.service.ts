@@ -7,12 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class MotorService {
 
-  private url = 'http://localhost:4200/assets/mock/motor.json';
   private data: any;
 
   constructor(private httpClient: HttpClient) { }
 
-  requestServiceData(obj:any): Observable<Array<any>> {
+  requestServiceData(policy:any): Observable<Array<any>> {
 
     return new Observable(observer => {
 
@@ -21,7 +20,7 @@ export class MotorService {
         return observer.complete();
       }
 
-      return this.httpClient.get(this.url).subscribe(res => {
+      return this.httpClient.get('http://localhost:4200/assets/mock/motor.json').subscribe(res => {
 
         this.data = res;
 
