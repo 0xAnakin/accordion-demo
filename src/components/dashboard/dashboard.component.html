@@ -2,7 +2,7 @@
 
   <div class="row">
     <div class="col-12">
-      <h1 class="dashboard-title">{{translationService.translate('dashboard.title')}}</h1>
+      <h1 class="dashboard-title">{{translationService.i18n.dashboard.title}}</h1>
     </div>
   </div>
 
@@ -23,7 +23,7 @@
 
           <ul class="dashboard-active-policy-filters" *ngFor="let filter of filters">
             <li>
-              <span>{{translationService.translate(getFilterLocalizationKey(filter))}}</span>
+              <span>{{translationService.i18n[getFilterLocalizationKey(filter)]}}</span>
               <i (click)="onFilterRemoveClick($event, filter)" class="fas fa-times-circle"></i>
             </li>
           </ul>
@@ -53,13 +53,13 @@
     <div class="col-12">
       <ul class="dashboard-bullet-list">
         <li>
-          <p>{{translationService.translate('dashboard.bulletList.first')}}</p>
+          <p>{{translationService.i18n.dashboard.bulletList.first}}</p>
         </li>
         <li>
-          <p>{{translationService.translate('dashboard.bulletList.second')}}</p>
+          <p>{{translationService.i18n.dashboard.bulletList.second}}</p>
         </li>
         <li>
-          <p>{{translationService.translate('dashboard.bulletList.third')}}</p>
+          <p>{{translationService.i18n.dashboard.bulletList.third}}</p>
         </li>
       </ul>
     </div>

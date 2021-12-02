@@ -12,12 +12,12 @@
     <div class="dashboard-policy-row-body">
       <table cellpading="0" cellspacing="0">
         <tr>
-          <th>{{translationService.translate('dashboard.list.insured')}}</th>
-          <th>{{translationService.translate('dashboard.list.policyNumber')}}</th>
-          <th>{{translationService.translate('dashboard.list.startDate')}}</th>
-          <th>{{translationService.translate('dashboard.list.endDate')}}</th>
-          <th>{{translationService.translate('dashboard.list.status')}}</th>
-          <th>{{translationService.translate('dashboard.list.ePolicy')}}</th>
+          <th>{{translationService.i18n.dashboard.list.insured}}</th>
+          <th>{{translationService.i18n.dashboard.list.policyNumber}}</th>
+          <th>{{translationService.i18n.dashboard.list.startDate}}</th>
+          <th>{{translationService.i18n.dashboard.list.endDate}}</th>
+          <th>{{translationService.i18n.dashboard.list.status}}</th>
+          <th>{{translationService.i18n.dashboard.list.ePolicy}}</th>
         </tr>
         <tr class="dashboard-policy-record" (click)="onRecordCLick($event, key, record)" *ngFor="let record of data[key].Policies">
           <td>{{record.Object}}</td>

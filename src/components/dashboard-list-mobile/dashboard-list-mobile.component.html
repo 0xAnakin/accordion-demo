@@ -14,27 +14,27 @@
        
         <div class="dashboard-policy-record mr-3" (click)="onRecordCLick($event, key, record)" *ngFor="let record of data[key].Policies">
           <div class="dashboard-policy-record-row">
-            <p>{{translationService.translate('dashboard.list.insured')}}</p>
+            <p>{{translationService.i18n.dashboard.list.insured}}</p>
             <p>{{record.Object}}</p>
           </div>
           <div class="dashboard-policy-record-row">
-            <p>{{translationService.translate('dashboard.list.policyNumber')}}</p>
+            <p>{{translationService.i18n.dashboard.list.policyNumber}}</p>
             <p>{{record.PolicyNo}}</p>
           </div>
           <div class="dashboard-policy-record-row">
-            <p>{{translationService.translate('dashboard.list.startDate')}}</p>
+            <p>{{translationService.i18n.dashboard.list.startDate}}</p>
             <p>{{formatDate(record.PolicyStart)}}</p>
           </div>
           <div class="dashboard-policy-record-row">
-            <p>{{translationService.translate('dashboard.list.endDate')}}</p>
+            <p>{{translationService.i18n.dashboard.list.endDate}}</p>
             <p>{{formatDate(record.PolicyEnd)}}</p>
           </div>
           <div class="dashboard-policy-record-row">
-            <p>{{translationService.translate('dashboard.list.status')}}</p>
+            <p>{{translationService.i18n.dashboard.list.status}}</p>
             <p>{{record.Status}}</p>
           </div>  
           <div class="dashboard-policy-record-row">
-            <p>{{translationService.translate('dashboard.list.ePolicy')}}</p>
+            <p>{{translationService.i18n.dashboard.list.ePolicy}}</p>
             <p>{{record.Consent}}</p>
           </div>                                                  
         </div>
