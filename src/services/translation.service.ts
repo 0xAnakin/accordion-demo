@@ -1,7 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Injectable, Inject, } from '@angular/core';
-import { EL } from '../assets/locales/el.json';
-import { EN } from '../assets/locales/en.json';
+import { EL } from 'src/locales/el.json';
+import { EN } from 'src/locales/en.json';
 
 @Injectable({
   providedIn: 'root'
