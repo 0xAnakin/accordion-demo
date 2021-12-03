@@ -21,8 +21,41 @@
         "third": "Αλλαγές και πληρωμές των τελευταίων 48 ωρών ίσως να μην εμφανίζονται εδώ."
       }
     },
+    "policies": {
+      "life":{
+        "headings":{
+          "licensePlate":"Licence Plate",
+          "startDate":"Starting Date",
+          "policyNo":"Policy Number",
+          "endDate":"Ending Date",
+          "status":"Status",
+          "ePolicy":"e-policy"
+        }
+      },
+      "motor":{
+        "headings":{
+          "licensePlate":"Licence Plate",
+          "startDate":"Starting Date",
+          "policyNo":"Policy Number",
+          "endDate":"Ending Date",
+          "status":"Status",
+          "ePolicy":"e-policy"
+        }      
+      },
+      "property":{
+        "headings":{
+          "licensePlate":"Licence Plate",
+          "startDate":"Starting Date",
+          "policyNo":"Policy Number",
+          "endDate":"Ending Date",
+          "status":"Status",
+          "ePolicy":"e-policy"
+        }      
+      }  
+    },     
     "policy": {
       "policyNavBack": "ΕΠΙΣΤΡΟΦΗ"
-    }
+    },
+    "notFound": "404 Page not found!"
   }
 }

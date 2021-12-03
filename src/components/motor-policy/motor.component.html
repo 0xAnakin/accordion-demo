@@ -18,27 +18,27 @@
           <div class="p-0 col-12 col-md-8 col-lg-9 policy-info-col">
             <ul>
               <li>
-                <p>Αρ. Κυκλοφορίας</p>
+                <p>{{translationService.i18n.policies.motor.headings.licensePlate}}</p>
                 <p>{{policy.Object}}</p>
               </li>
               <li>
-                <p>Ημ. Έναρξης</p>
+                <p>{{translationService.i18n.policies.motor.headings.startDate}}</p>
                 <p>{{formatDate(policy.PolicyStart)}}</p>
               </li>
               <li>
-                <p>Αρ. Συμβολαίου</p>
+                <p>{{translationService.i18n.policies.motor.headings.policyNo}}</p>
                 <p>{{policy.PolicyNo}}</p>
               </li>
               <li>
-                <p>Ημ. Λήξης</p>
+                <p>{{translationService.i18n.policies.motor.headings.endDate}}</p>
                 <p>{{formatDate(policy.PolicyEnd)}}</p>
               </li>
               <li>
-                <p>Κατάσταση</p>
+                <p>{{translationService.i18n.policies.motor.headings.status}}</p>
                 <p>{{policy.Status}}</p>
               </li>
               <li>
-                <p>e-policy</p>
+                <p>{{translationService.i18n.policies.motor.headings.ePolicy}}</p>
                 <div class="switch">
                   <label>
                     <input type="checkbox" (change)="onSwitchChange($event)"/>

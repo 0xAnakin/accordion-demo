@@ -21,8 +21,41 @@
         "third": "Changes and payments in the last 48 hours may not appear here."
       }
     },
-    "policy": {
-      "policyNavBack": "BACK"
-    }
+    "policies": {
+      "life":{
+        "headings":{
+          "licensePlate":"Αρ. Κυκλοφορίας",
+          "startDate":"Ημ. Έναρξης",
+          "policyNo":"Αρ. Συμβολαίου",
+          "endDate":"Ημ. Λήξης",
+          "status":"Κατάσταση",
+          "ePolicy":"e-policy"
+        }
+      },
+      "motor":{
+        "headings":{
+          "licensePlate":"Αρ. Κυκλοφορίας",
+          "startDate":"Ημ. Έναρξης",
+          "policyNo":"Αρ. Συμβολαίου",
+          "endDate":"Ημ. Λήξης",
+          "status":"Κατάσταση",
+          "ePolicy":"e-policy"
+        }      
+      },
+      "property":{
+        "headings":{
+          "licensePlate":"Αρ. Κυκλοφορίας",
+          "startDate":"Ημ. Έναρξης",
+          "policyNo":"Αρ. Συμβολαίου",
+          "endDate":"Ημ. Λήξης",
+          "status":"Κατάσταση",
+          "ePolicy":"e-policy"
+        }      
+      }  
+    },  
+    "policy": {      
+      "policyNavBack": "BACK"      
+    },
+    "notFound": "404 Page not found!"
   }
 }
