@@ -1,5 +1,3 @@
 <div [class]="nested ? 'custom-accordion custom-accordion-child' : 'custom-accordion custom-accordion-parent'">
-  <ng-container *ngFor="let entry of data">
-    <app-accordion-entry [entry]="entry" *ngIf="entry.title?.length>0"></app-accordion-entry>
-  </ng-container>
+  <app-accordion-entry [entry]="entry" *ngFor="let entry of data"></app-accordion-entry>
 </div>
