@@ -21,8 +21,8 @@
             </div>
           </div>
 
-          <ul class="dashboard-active-policy-filters" *ngFor="let filter of filters">
-            <li>
+          <ul class="dashboard-active-policy-filters">
+            <li *ngFor="let filter of filters">
               <span>{{translationService.i18n.dashboard.filters[filter]}}</span>
               <i (click)="onFilterRemoveClick($event, filter)" class="fas fa-times-circle"></i>
             </li>
